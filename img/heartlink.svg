@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800" fill="none">
+  <rect width="1200" height="800" rx="18" fill="#fff" stroke="#e5e7eb"/>
+  <g transform="translate(80,80)">
+    <circle cx="150" cy="150" r="100" fill="#ffdde0" stroke="#ff99a0"/>
+    <path d="M150 110c10-22 40-42 70-20 26 19 28 52 6 86-24 38-76 74-76 74s-52-36-76-74c-22-34-20-67 6-86 30-22 60-2 70 20z" fill="#ff6b81" opacity="0.95"/>
+    <text x="340" y="140" font-family="Arial, Helvetica, sans-serif" font-size="42" fill="#1f2937">HeartLink AI</text>
+    <text x="340" y="190" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#4b5563">EHR summarization · 2025</text>
+    <rect x="0" y="260" width="980" height="1" fill="#e5e7eb"/>
+    <text x="0" y="320" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#6b7280">AI-assisted workflow that condenses EHRs into quick, actionable snapshots for clinicians.</text>
+  </g>
+</svg>
