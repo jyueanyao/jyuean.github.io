@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Recycle Go — Project</title>
+  <meta name="description" content="Recycle Go design thinking project.">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand"><span class="brand__dot" aria-hidden="true"></span> Jyue-An (Julia) Yao</div>
+       <nav class="nav__links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+       <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav__cta"><a href="projects.html">← Back to Projects</a></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h1 class="section__title">Recycle Go</h1>
+      <p class="card__meta">Design Thinking Project — Packaging Waste</p>
+
+      <article class="card">
+        <div class="card__media"><img src="img/recycle.svg" alt="Recycle Go cover"></div>
+        <div class="card__body">
+          <p>Using psychology and design thinking to reframe packaging waste behavior and propose intervention points across retail and consumer touchpoints.</p>
+
+          <h3>Work done</h3>
+          <ul>
+            <li>User interviews and journey mapping</li>
+            <li>Concept testing and low-fi prototypes</li>
+            <li>Recommendations for nudge-based design</li>
+          </ul>
+
+          <div class="tags">
+            <span class="tag">Psychology</span>
+            <span class="tag">Design Thinking</span>
+            <span class="tag">UIUX Design</span>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__row">
+      <p>© <span id="year"></span> Jyue-An Yao</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

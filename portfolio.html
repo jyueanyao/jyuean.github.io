@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portfolio Website — Project</title>
+  <meta name="description" content="Portfolio Website project.">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand"><span class="brand__dot" aria-hidden="true"></span> Jyue-An (Julia) Yao</div>
+       <nav class="nav__links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+       <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav__cta"><a href="projects.html">← Back to Projects</a></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h1 class="section__title">Portfolio Website</h1>
+      <p class="card__meta">HTML/CSS/JS · 2025</p>
+
+      <article class="card">
+        <div class="card__media"><img src="img/portfolio.svg" alt="Portfolio website screenshot"></div>
+        <div class="card__body">
+          <p>Flexbox-first multi-page portfolio built with accessibility and lightweight interactions. Includes smooth transitions, semantic markup, and progressive enhancement.</p>
+
+          <h3>Highlights</h3>
+          <ul>
+            <li>Accessible navigation and focus states</li>
+            <li>Responsive layout using Flexbox / Grid</li>
+            <li>Performance-minded images and simple JS enhancements</li>
+          </ul>
+
+          <div class="tags">
+            <span class="tag">Front-end</span>
+            <span class="tag">Accessibility</span>
+            <span class="tag">jQuery</span>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__row">
+      <p>© <span id="year"></span> Jyue-An Yao</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

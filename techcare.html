@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>TechCare — Project</title>
+  <meta name="description" content="TechCare senior project.">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand"><span class="brand__dot" aria-hidden="true"></span> Jyue-An (Julia) Yao</div>
+       <nav class="nav__links" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+       <a href="contact.html">Contact</a>
+      </nav>
+      <div class="nav__cta"><a href="projects.html">← Back to Projects</a></div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="section">
+      <h1 class="section__title">TechCare</h1>
+      <p class="card__meta">Undergraduate Senior Final Project</p>
+
+      <article class="card">
+        <div class="card__media"><img src="img/techcare.svg" alt="TechCare cover"></div>
+        <div class="card__body">
+          <p>UX-based solution to improve operational efficiency and resident care in long-term care facilities, with a focus on dementia workflows.</p>
+
+          <h3>Contributions</h3>
+          <ul>
+            <li>Research with care staff and families</li>
+            <li>Prototyping and high-fidelity mockups</li>
+            <li>Design recommendations for handoff and alerts</li>
+          </ul>
+
+          <div class="tags">
+            <span class="tag">AdobeXD</span>
+            <span class="tag">Prototyping</span>
+            <span class="tag">UX Research</span>
+          </div>
+        </div>
+      </article>
+
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__row">
+      <p>© <span id="year"></span> Jyue-An Yao</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
