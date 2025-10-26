@@ -11,12 +11,17 @@
   <header class="header">
     <div class="container nav">
       <div class="brand"><span class="brand__dot" aria-hidden="true"></span> Jyue-An (Julia) Yao</div>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
        <nav class="nav__links" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
         <a href="projects.html">Projects</a>
       </nav>
-      <div class="nav__cta"><a href="projects.html">← Back to Projects</a></div>
+      
     </div>
   </header>
 
@@ -55,5 +60,15 @@
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <script>
+    (function(){
+      var btn = document.querySelector('.nav-toggle');
+      if(!btn) return;
+      btn.addEventListener('click', function(){
+        var open = document.body.classList.toggle('nav-open');
+        btn.setAttribute('aria-expanded', open);
+      });
+    })();
+  </script>
 </body>
 </html>

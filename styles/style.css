@@ -62,11 +62,6 @@ body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
 .tags{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.25rem}
 .tag{font-size:.8rem;background:#f5f5f5;border:1px solid var(--border);padding:.25rem .5rem;border-radius:999px}
 
-/* Expanded project detail panel that appears below cards */
-.card-expanded{grid-column:1/-1;background:var(--white);border:1px solid var(--border);border-radius:var(--r1);padding:var(--s4);box-shadow:0 8px 26px rgba(0,0,0,.06);margin-top:0}
-.card-expanded .card{box-shadow:none;border:0}
-.card-expanded h2{margin-top:0}
-
 /* Footer */
 .footer{border-top:1px solid var(--border);padding:var(--s5) 0;color:var(--ink-2);background:white}
 .footer__row{display:flex;gap:var(--s5);justify-content:space-between;align-items:center;flex-wrap:wrap}
@@ -93,4 +88,21 @@ p::first-line{letter-spacing:.2px}
 @media (min-width:900px){
   .cards{grid-template-columns:repeat(2, 1fr);gap:2.25rem}
   .card__media{height:320px}
+}
+
+/* Mobile hamburger menu */
+.nav-toggle{display:none;border:0;background:transparent;padding:.35rem;border-radius:8px;cursor:pointer}
+.nav-toggle .bar{display:block;width:20px;height:2px;background:var(--ink);margin:3px 0;transition:transform .15s ease,opacity .15s ease}
+
+@media (max-width:640px){
+  .nav-toggle{display:inline-flex;align-items:center}
+  /* hide default nav until toggled */
+  .nav__links{display:none;position:absolute;top:64px;right:1rem;flex-direction:column;background:var(--white);padding:1rem;border-radius:12px;box-shadow:0 10px 30px rgba(2,6,23,.08);width:calc(100% - 2rem);max-width:320px;z-index:45}
+  .nav__links a{display:block;padding:.6rem .8rem}
+  /* when nav is open */
+  body.nav-open .nav__links{display:flex}
+  /* transform hamburger into X when open */
+  body.nav-open .nav-toggle .bar:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  body.nav-open .nav-toggle .bar:nth-child(2){opacity:0}
+  body.nav-open .nav-toggle .bar:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
 }
