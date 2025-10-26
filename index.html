@@ -45,9 +45,10 @@ made manual edits to ensure accuracy and completeness.
 
     .card{width:var(--card-w);background:#fff;border:1px solid #eef2f7;border-radius:var(--r2);box-shadow:var(--shadow-lg);overflow:hidden}
     .card__top{display:grid;grid-template-columns: 220px 1fr;gap:var(--s5);padding:var(--s5);align-items:center}
-    .avatar{aspect-ratio:1/1;border-radius:20px;overflow:hidden;border:1px solid #eee;box-shadow:0 10px 24px rgba(0,0,0,.06);transform:translateY(0);transition:transform var(--speed) ease, box-shadow var(--speed) ease}
-    .avatar img{width:100%;height:100%;object-fit:cover}
-    .avatar:hover{transform:translateY(-4px);box-shadow:0 14px 30px rgba(0,0,0,.12)}
+    .avatar{aspect-ratio:1/1;border-radius:20px;overflow:hidden;border:1px solid #eee;box-shadow:0 10px 24px rgba(0,0,0,.06);transform:translateY(0);transition:all var(--speed) cubic-bezier(0.4, 0, 0.2, 1)}
+    .avatar img{width:100%;height:100%;object-fit:cover;transition:transform var(--speed) ease}
+    .avatar:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(0,0,0,.15)}
+    .avatar:hover img{transform:scale(1.03)}
 
     .title{font-family:"Playfair Display", serif;font-weight:700;font-size:clamp(1.6rem, 3.2vw, 2.4rem);margin:0}
     .subtitle{color:var(--ink-2);margin:.25rem 0 0}

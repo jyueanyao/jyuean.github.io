@@ -9,7 +9,7 @@ html,body{height:100%}
 
   /* text & background */
   --ink:#22223b; --ink-2:#4b5563; --ink-3:#6b7280;
-  --bg:linear-gradient(135deg,#f7f7fa 0%, #fff 60%, #f7fbff 100%); --white:#fff; --border:#e5e7eb;
+  --bg:linear-gradient(135deg,#fff7f7 0%, #fff 35%, #f7fbff 100%); --white:#fff; --border:#e5e7eb;
 
   --max:1100px;
   --r1:12px; --r2:18px;
@@ -93,8 +93,8 @@ p::first-line{letter-spacing:.2px}
 }
 
 /* Mobile hamburger menu */
-.nav-toggle{display:none;border:0;background:transparent;padding:.35rem;border-radius:8px;cursor:pointer}
-.nav-toggle .bar{display:block;width:20px;height:2px;background:var(--ink);margin:3px 0;transition:transform .15s ease,opacity .15s ease}
+.nav-toggle{display:none;border:0;background:transparent;padding:.5rem;border-radius:8px;cursor:pointer;width:40px;height:40px}
+.nav-toggle .bar{display:block;width:24px;height:2px;background:var(--ink);margin:5px 0;transition:transform .15s ease,opacity .15s ease}
 
 @media (max-width:640px){
   .nav-toggle{display:inline-flex;align-items:center}
@@ -104,7 +104,7 @@ p::first-line{letter-spacing:.2px}
   /* when nav is open */
   body.nav-open .nav__links{display:flex}
   /* transform hamburger into X when open */
-  body.nav-open .nav-toggle .bar:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  body.nav-open .nav-toggle .bar:nth-child(1){transform:translateY(7px) rotate(45deg)}
   body.nav-open .nav-toggle .bar:nth-child(2){opacity:0}
-  body.nav-open .nav-toggle .bar:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+  body.nav-open .nav-toggle .bar:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
 }
