@@ -26,19 +26,16 @@
   animation: 
     typing 10s steps(50, end) infinite,
     blink 0.75s step-end infinite;
-}
-
-.animated-text.delay-1 {
-  animation-delay: 0.5s;
-}
-
-.animated-text.delay-2 {
-  animation-delay: 4s;
+  text-align: left !important;
 }
 
 .title-container {
   display: block;
   width: 100%;
   max-width: 100%;
-  text-align: left;
+  text-align: left !important;
+}
+
+.hero__text {
+  text-align: left !important;
 }
