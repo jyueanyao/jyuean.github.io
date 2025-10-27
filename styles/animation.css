@@ -11,9 +11,12 @@
   display: inline-block;
   overflow: hidden;
   border-right: .15em solid var(--cardinal);
-  white-space: nowrap;
+  white-space: normal;
   margin: 0;
   letter-spacing: .1em;
+  max-width: 100%;
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  line-height: 1.2;
   animation: 
     typing 3.5s steps(40, end),
     blink 1s step-end infinite;
