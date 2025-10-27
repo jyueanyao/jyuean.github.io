@@ -13,7 +13,7 @@ const createNavBar = () => {
       </button>
       <nav class="nav__links" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="about.html">Favorite</a>
+        <a href="index.html#about">About</a>
         <a href="projects.html">Works and Projects</a>
       </nav>
     </div>
