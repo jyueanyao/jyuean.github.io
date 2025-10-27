@@ -1,12 +1,3 @@
-<!--
-AI DISCLOSURE: 
-This HTML document was created with assistance from GitHub Copilot AI.
-AI was used to help structure the semantic HTML, organize content sections, and enhance
-the biographical information based on provided resume details. All personal information,
-career history, and achievements are factually accurate and belong to Jake Spurlock.
-The professor (Jake Spurlock) provided the content direction, personal details, and
-made manual edits to ensure accuracy and completeness.
--->
 <!doctype html>
 <html lang="en">
 <head>
@@ -36,11 +27,19 @@ made manual edits to ensure accuracy and completeness.
     body{margin:0;background:var(--bg);font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;color:var(--ink);line-height:1.6}
 
     .site{max-width:1100px;margin:0 auto;padding:0 var(--s3)}
-    header{display:flex;justify-content:space-between;align-items:center;padding:var(--s4) 0}
+    header{display:flex;justify-content:space-between;align-items:center;padding:var(--s3) 0}
     .brand{font-weight:800;letter-spacing:.2px}
     .brand__accent{background:var(--brand);-webkit-background-clip:text;background-clip:text;color:transparent}
 
-    nav a{padding:.4rem .8rem;border-radius:999px;text-decoration:none;color:var(--ink-2);border:1px solid transparent;transition:all var(--speed) ease}
+    nav a{
+      padding:.3rem .6rem;
+      border-radius:999px;
+      text-decoration:none;
+      color:var(--ink-2);
+      border:1px solid transparent;
+      transition:all var(--speed) ease;
+      font-size:.9rem;
+    }
     nav a:hover{color:var(--ink);border-color:#e5e7eb;box-shadow:0 6px 18px rgba(0,0,0,.06)}
     nav a:active{transform:translateY(1px)}
 
@@ -97,7 +96,7 @@ made manual edits to ensure accuracy and completeness.
 
   <section class="hero container">
     <div class="hero__text">
-      <div class="title-container" style="max-width: 100%;">
+      <div class="title-container">
         <h1><span class="title-animated">Hi there, this is Julia✨ 🙋🏻‍♀️ 👩🏻‍💻</span></h1>
       </div>
       <p>Product &amp; UX designer with a computer‑science background. I turn complex problems into clear, intuitive products through user research, interaction design, and rapid prototyping—balancing accessibility, data‑informed decisions, and delightful details.</p>
@@ -138,7 +137,7 @@ made manual edits to ensure accuracy and completeness.
   <main class="container">
    
     <section class="section container" id="about">
-      <h2 class="section__title">About</h2>
+      <h2 class="section__title">Fun facts about me</h2>
       <p class="section__subtitle">MS in IDBT @ USC • Background in Information Management</p>
       <div class="about-grid" style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start;">
         <!-- 左側圖片 -->
@@ -148,7 +147,6 @@ made manual edits to ensure accuracy and completeness.
         
         <!-- 右側文字 -->
         <div class="about__text" style="flex:1 1 55%; min-width:300px;">
-          <h2 class="section__title">Fun facts about me</h2>
           
           <p>👩🏻‍💻 I'm a product and UX designer currently based in Los Angeles. I was born and raised in Taiwan and moved to California for graduate school, where I'm pursuing a Master's in Integrated Design, Business, and Technology at USC.</p>
           <br> 
@@ -174,6 +172,8 @@ made manual edits to ensure accuracy and completeness.
         <span class="pill">Figma</span>
       </div>
     </section>
+
+ 
   </main>
 
   <footer class="footer">
@@ -196,3 +196,7 @@ made manual edits to ensure accuracy and completeness.
   </script>
 </body>
 </html>
+
+    nav {
+      gap:.5rem;
+    }
