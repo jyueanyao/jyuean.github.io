@@ -1,6 +1,6 @@
 @keyframes typing {
-  0% { max-width: 0; }
-  100% { max-width: 100%; }
+  0% { width: 0; }
+  100% { width: 100%; }
 }
 
 @keyframes blink {
@@ -24,14 +24,13 @@
     typing 5s steps(45, end) forwards,
     blink 0.75s step-end 5s infinite;
   text-align: left !important;
-  max-width: 100%;
-  width: auto;
+  width: 100%;
 }
 
 .title-container {
   display: block;
   width: 100%;
-  max-width: 100%;
+  max-width: none;
   text-align: left !important;
 }
 

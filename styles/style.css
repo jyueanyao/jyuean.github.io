@@ -32,7 +32,7 @@ body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
 /* Hero */
 .hero{display:flex;flex-direction:column;gap:0;align-items:stretch;justify-content:center;padding:0;min-height:auto;text-align:center;position:relative;background:#fff}
 .hero__text{flex:1 1 100%;min-width:280px;background:#fff;border-radius:0;padding:3rem 2rem;box-shadow:none;border-right:6px solid var(--gold);}
-.hero__text h1{font-family:'Playfair Display', serif;font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;margin-bottom:.7rem;letter-spacing:.5px;color:var(--cardinal);}
+.hero__text h1{font-family:'Playfair Display', serif;font-size:clamp(2rem,5vw,3.2rem);line-height:1.05;margin-bottom:.7rem;letter-spacing:.5px;color:var(--cardinal);display:block;width:100%;margin:0;}
 .hero__text p{margin-top:var(--s3);color:var(--ink-2);max-width:60ch;margin-left:auto;margin-right:auto;font-size:1rem;text-align:left}
 .hero__actions{margin-top:var(--s4);display:flex;gap:var(--s3);flex-wrap:wrap;justify-content:flex-start}
 .btn{display:inline-flex;align-items:center;gap:.5rem;text-decoration:none;font-weight:600;border-radius:12px;padding:.75rem 1rem;border:1px solid transparent}
