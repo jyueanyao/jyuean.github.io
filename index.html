@@ -92,44 +92,34 @@ made manual edits to ensure accuracy and completeness.
   </style>
 </head>
 <body>
-  <header class="header">
-    <div class="container nav">
-  <a class="brand" href="index.html"><img src="img/griffith.JPG" alt="Julia Yao" class="nav-avatar"> Julia Yao</a>
-      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-      </button>
-      <nav class="nav__links" aria-label="Main navigation">
-        <!-- Navigation bar -->
-        <a href="index.html">Home</a>
-        <a href="about.html">Favorite</a>
-        <a href="projects.html">Experience</a>
-      </nav>
-      <!-- <div class="nav__cta">
-        <a href="projects.html">Projects</a>
-      </div> -->
-    </div>
-  </header>
+  <header class="header"></header>
+  <script src="components/navbar.js"></script>
 
   <section class="hero container">
     <div class="hero__text">
       <div class="title-container" style="max-width: 100%;">
-        <h1 class="animated-text" style="word-wrap: break-word;">Hi there, this is Julia ✨ 🙋🏻‍♀️ 👩🏻‍💻</h1>
+        <h1><span class="title-animated">Hi there, this is Julia✨ 🙋🏻‍♀️ 👩🏻‍💻</span> </h1>
       </div>
-      <p class="animated-text delay-1" style="max-width: 100%;">I am a UX designer with a background in information management and UIUX Design. With passion for UIUX design/research,and Product Design. willing to solve users problems</p>
+      <p>I am a UX designer with a background in Computer Science and UIUX.<br>
+        With passion for UIUX design/research,and Product Design.<br>
+        willing to solve users problems</p>
       <div class="hero__actions">
         <a class="btn btn--primary" style="background:#0077b5; border-color:#0077b5;display:inline-flex;align-items:center;gap:.6rem;"
            href="https://www.linkedin.com/in/juliayao333/" target="_blank" rel="noopener noreferrer">
           <!-- LinkedIn icon -->
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle"><path d="M4.98 3.5a2.25 2.25 0 11.001 4.5A2.25 2.25 0 014.98 3.5zM3 8.75h4v12H3v-12zM9.75 8.75H14v1.6c.6-1 2.05-1.6 3.35-1.6 3.2 0 3.9 2 3.9 4.6v7.4h-4v-6.55c0-1.56-.03-3.57-2.35-3.57-2.35 0-2.71 1.84-2.71 3.45V21.75h-4v-13z" fill="#fff"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle;background:#fff;border-radius:4px;padding:2px;">
+            <path d="M4.98 3.5a2.25 2.25 0 11.001 4.5A2.25 2.25 0 014.98 3.5zM3 8.75h4v12H3v-12zM9.75 8.75H14v1.6c.6-1 2.05-1.6 3.35-1.6 3.2 0 3.9 2 3.9 4.6v7.4h-4v-6.55c0-1.56-.03-3.57-2.35-3.57-2.35 0-2.71 1.84-2.71 3.45V21.75h-4v-13z" fill="#0077b5"/>
+          </svg>
           LinkedIn
         </a>
         <a class="btn btn--primary" style="background:#990000; border-color:#990000;display:inline-flex;align-items:center;gap:.6rem;"
            href="https://drive.google.com/file/d/1vvs_OoR8fpft6eY72Xvasdgzdr9kumvl/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
           <!-- Resume / document icon -->
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="display:inline-block;vertical-align:middle"><path d="M6 2h7l5 5v13a1 1 0 01-1 1H6a1 1 0 01-1-1V3a1 1 0 011-1z" fill="#fff"/><path d="M13 3v5h5" fill="#fff" opacity="0.9"/></svg>
-          Resume
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="4" y="3" width="16" height="18" rx="2" fill="#fff"/>
+  <circle cx="12" cy="9" r="2" fill="#990000"/>
+  <path d="M8 15h8v1H8zM8 17h8v1H8z" fill="#990000"/>
+</svg>          Resume
         </a>
         <a class="btn btn--primary" style="background:#24292f; border-color:#24292f;display:inline-flex;align-items:center;gap:.5rem;"
            href="https://github.com/jyueanyao" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -152,7 +142,7 @@ made manual edits to ensure accuracy and completeness.
       <div class="about-grid" style="display:flex; flex-wrap:wrap; gap:2rem; align-items:flex-start;">
         <!-- 左側圖片 -->
         <div class="about__image" style="flex:1 1 40%; min-width:280px;">
-          <img src="img/griffithlawn.JPG" alt="Photo of Jyue-An at Hollywood sign" style="width:100%; border-radius:18px; box-shadow:0 8px 26px rgba(0,0,0,.1);">
+          <img src="img/griffithtop.jpeg" alt="Photo of Jyue-An at Hollywood sign" style="width:100%; border-radius:18px; box-shadow:0 8px 26px rgba(0,0,0,.1);">
         </div>
         
         <!-- 右側文字 -->
@@ -160,19 +150,19 @@ made manual edits to ensure accuracy and completeness.
           <h2 class="section__title">Fun facts about me</h2>
           
           <p>👩🏻‍💻 I'm a product and UX designer currently based in Los Angeles. I was born and raised in Taiwan and moved to California for graduate school, where I'm pursuing a Master's in Integrated Design, Business, and Technology at USC.</p>
-          
+          <br> 
           <p>🎨 I've loved visual storytelling since I was a kid—I studied fine art in junior high and later discovered the power of design in solving real-world problems. My journey into UX began with designing for education-focused projects and working hands-on with user research and prototypes.</p>
-          
+          <br> 
           <p>🧠 I've worked on cross-disciplinary teams involving data analytics, IT, and design. My capstone project aimed to improve service experiences in Taiwan's long-term care system, and I've also created digital learning tools for young students in rural areas.</p>
-          
+          <br> 
           <p>📸 I also love capturing moments through my iPhone 16 Pro—whether it's spontaneous street scenes, quiet light, or short-form video. Photography and video editing are creative habits that fuel my design sense and storytelling intuition.</p>
-                
+              <br>  
           <p>🕺 Outside of work, I tap dance to clear my mind, go jogging to stay energized, read to explore new ideas, and meditate to reconnect with myself. Balance is part of my creative rhythm.</p>
         </div>
       </div>
 
       <div class="skills">
-        <span class="pill">UX Research</span>
+        <span class="pill">UI/UX Research</span>
         <span class="pill">Interaction Design</span>
         <span class="pill">Prototyping</span>
         <span class="pill">Information Architecture</span>
