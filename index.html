@@ -15,6 +15,7 @@ made manual edits to ensure accuracy and completeness.
   <title>Jyue-An (Julia) Yao — Portfolio</title>
   <meta name="description" content="Responsive homepage with Flexbox layout linking to Projects.">
   <link rel="stylesheet" href="styles/style.css">
+  <link rel="stylesheet" href="styles/animation.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -102,7 +103,7 @@ made manual edits to ensure accuracy and completeness.
       <nav class="nav__links" aria-label="Main navigation">
         <!-- Navigation bar -->
         <a href="index.html">Home</a>
-        <a href="about.html">About</a>
+        <a href="about.html">Favorite</a>
         <a href="projects.html">Experience</a>
       </nav>
       <!-- <div class="nav__cta">
@@ -113,8 +114,10 @@ made manual edits to ensure accuracy and completeness.
 
   <section class="hero container">
     <div class="hero__text">
-      <h1>Hi there, this is Julia ✨ 🙋🏻‍♀️ 👩🏻‍💻</h1>
-      <p>I am a UX designer with a background in information management and UIUX Design. With passion for UIUX design/research,and Product Design. willing to solve users problems</p>
+      <div class="title-container">
+        <h1 class="animated-text">Hi there, this is Julia ✨ 🙋🏻‍♀️ 👩🏻‍💻</h1>
+      </div>
+      <p class="animated-text delay-1">I am a UX designer with a background in information management and UIUX Design. With passion for UIUX design/research,and Product Design. willing to solve users problems</p>
       <div class="hero__actions">
         <a class="btn btn--primary" style="background:#0077b5; border-color:#0077b5;display:inline-flex;align-items:center;gap:.6rem;"
            href="https://www.linkedin.com/in/juliayao333/" target="_blank" rel="noopener noreferrer">
