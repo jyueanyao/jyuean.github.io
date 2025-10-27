@@ -1,6 +1,6 @@
 @keyframes typing {
-  0%, 100% { width: 0; }
-  50%, 90% { width: 100%; }
+  0% { width: 0; }
+  100% { width: 100%; }
 }
 
 @keyframes blink {
@@ -16,10 +16,9 @@
   display: inline-block;
   overflow: hidden;
   border-right: 0.15em solid var(--cardinal);
-  white-space: normal;
-  word-break: break-all;
+  white-space: nowrap;
   margin: 0;
-  width: 100%;
+  width: fit-content;
   max-width: 100%;
   font-size: clamp(1.8rem, 4vw, 2.5rem);
   line-height: 1.2;
