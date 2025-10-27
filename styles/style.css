@@ -19,7 +19,7 @@ body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
 .container{max-width:var(--max);margin:0 auto;padding:0 var(--s3)}
 
 /* Header / Nav */
-.header{position:sticky;top:0;background:var(--cardinal);border-bottom:4px solid var(--gold);z-index:40}
+.header{position:fixed;top:0;background:var(--cardinal);border-bottom:4px solid var(--gold);z-index:40;width:100%;left:0;right:0}
 .nav{display:flex;align-items:center;justify-content:space-between;gap:var(--s3);padding:var(--s3) 0;flex-wrap:wrap}
 .brand{display:flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:.2px;text-decoration:none;color:#fff;font-size:1.25rem;transition:color .2s}
 .brand:hover{color:var(--gold);text-decoration:none;box-shadow:0 2px 12px rgba(255,215,0,.2)}
