@@ -19,10 +19,13 @@
   white-space: nowrap;
   margin: 0;
   font-size: clamp(1.5rem, 4vw, 3.5rem);
+  color: var(--cardinal);
   animation: 
     typing 5s steps(45, end) forwards,
     blink 0.75s step-end 5s infinite;
   text-align: left !important;
+  max-width: 100%;
+  width: auto;
 }
 
 .title-container {
