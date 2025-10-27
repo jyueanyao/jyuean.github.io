@@ -4,7 +4,7 @@ const createNavBar = () => {
     <div class="container nav">
         <a href="index.html" class="brand">
           <img src="img/griffithtop.jpeg" alt="Julia Yao" class="nav-avatar"> 
-          Julia Yao
+          <span class="brand-text">Julia Yao</span>
         </a>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span class="bar"></span>
@@ -13,8 +13,8 @@ const createNavBar = () => {
       </button>
       <nav class="nav__links" aria-label="Main navigation">
         <a href="index.html">Home</a>
-        <a href="index.html#about">About</a>
-        <a href="projects.html">Works and Projects</a>
+        <a href="index.html#about">Favorite</a>
+        <a href="projects.html">Experience</a>
       </nav>
     </div>
   `;
@@ -24,6 +24,25 @@ const createNavBar = () => {
   if (header) {
     header.innerHTML = navHTML;
   }
+
+  // 添加漢堡菜單點擊事件
+  const navToggle = document.querySelector('.nav-toggle');
+  if (navToggle) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = document.body.classList.toggle('nav-open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+  }
+
+  // 點擊導航連結時關閉菜單
+  const navLinks = document.querySelectorAll('.nav__links a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      document.body.classList.remove('nav-open');
+      const toggle = document.querySelector('.nav-toggle');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+    });
+  });
 };
 
 // 當DOM加載完成時初始化導航欄
