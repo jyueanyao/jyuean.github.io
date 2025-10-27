@@ -1,6 +1,6 @@
 @keyframes typing {
-  0% { width: 0; }
-  100% { width: 100%; }
+  0% { max-width: 0; }
+  100% { max-width: 100%; }
 }
 
 @keyframes blink {
@@ -18,13 +18,10 @@
   border-right: 0.15em solid var(--cardinal);
   white-space: nowrap;
   margin: 0;
-  width: fit-content;
-  max-width: 100%;
-  font-size: clamp(1.8rem, 4vw, 2.5rem);
-  line-height: 1.2;
+  font-size: clamp(1.5rem, 4vw, 3.5rem);
   animation: 
-    typing 10s steps(50, end) infinite,
-    blink 0.75s step-end infinite;
+    typing 5s steps(45, end) forwards,
+    blink 0.75s step-end 5s infinite;
   text-align: left !important;
 }
 
