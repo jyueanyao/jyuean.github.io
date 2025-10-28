@@ -21,8 +21,8 @@
   font-size: clamp(1.5rem, 4vw, 3.5rem);
   color: var(--cardinal);
   animation: 
-    typing 5s steps(45, end) forwards,
-    blink 0.75s step-end 5s infinite;
+    typing 2.5s steps(45, end) forwards,
+    blink 0.75s step-end 2.5s infinite;
   text-align: left !important;
   width: 100%;
 }
