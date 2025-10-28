@@ -37,7 +37,7 @@
         <div><strong>Role</strong><br>UIUX Designer · Product Designer</div>
         <div><strong>Team</strong><br>Product Designer · Engineer</div>
         <div><strong>Timeline</strong><br>Aug. 2025 - Present</div>
-        <div><strong>Tools</strong><br>Figma, Prototyping</div>
+        <div><strong>Tools</strong><br>Miro, AdobeIllustrator</div>
       </div>
 
       <section>
@@ -63,15 +63,60 @@
 
       <h2>Persona</h2>
       <section>
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin: 2rem 0;">
-          <div>
-            <img src="img/EasyTap/EasytapPersona1.png" alt="EasyTap Persona" style="max-width: 100%; height: auto; border-radius: 12px;">
+        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin: 2rem 0; position: relative;">
+          <!-- Persona Container -->
+          <div style="position: relative; min-height: 400px; display: flex; align-items: center; justify-content: center;">
+            <!-- Persona 1 -->
+            <div class="persona-slide" id="persona-1" style="position: absolute; width: 100%; opacity: 1; transition: opacity 0.5s ease;">
+              <img src="img/EasyTap/EasytapPersona1.png" alt="EasyTap Persona 1" style="max-width: 100%; height: auto; border-radius: 12px;">
+            </div>
+            
+            <!-- Persona 2 -->
+            <div class="persona-slide" id="persona-2" style="position: absolute; width: 100%; opacity: 0; transition: opacity 0.5s ease;">
+              <img src="img/EasyTap/EasyTapPersona2.png" alt="EasyTap Persona 2" style="max-width: 100%; height: auto; border-radius: 12px;">
+            </div>
+
+            <!-- Navigation Buttons -->
+            <button class="persona-nav-btn" onclick="prevPersona()" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(255, 255, 255, 0.85); color: #333; border: none; padding: 12px 16px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; z-index: 10; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">‹</button>
+            <button class="persona-nav-btn" onclick="nextPersona()" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(255, 255, 255, 0.85); color: #333; border: none; padding: 12px 16px; border-radius: 50%; cursor: pointer; font-size: 1.5rem; z-index: 10; width: 50px; height: 50px; display: flex; align-items: center; justify-content: center; transition: background 0.3s ease;">›</button>
           </div>
-          <div>
-            <img src="img/EasyTap/persona2.png" alt="EasyTap Persona" style="max-width: 100%; height: auto; border-radius: 12px;">
+
+          <!-- Indicator Dots -->
+          <div style="display: flex; justify-content: center; gap: 0.5rem; margin-top: 1rem;">
+            <span class="persona-dot" onclick="showPersona(1)" style="width: 12px; height: 12px; border-radius: 50%; background: #C41E3A; cursor: pointer; transition: all 0.3s ease;" id="dot-1"></span>
+            <span class="persona-dot" onclick="showPersona(2)" style="width: 12px; height: 12px; border-radius: 50%; background: #e5e7eb; cursor: pointer; transition: all 0.3s ease;" id="dot-2"></span>
           </div>
         </div>
       </section>
+
+      <script>
+        let currentPersona = 1;
+
+        function showPersona(n) {
+          currentPersona = n;
+          updatePersonaDisplay();
+        }
+
+        function nextPersona() {
+          currentPersona = currentPersona === 1 ? 2 : 1;
+          updatePersonaDisplay();
+        }
+
+        function prevPersona() {
+          currentPersona = currentPersona === 1 ? 2 : 1;
+          updatePersonaDisplay();
+        }
+
+        function updatePersonaDisplay() {
+          // Update slides
+          document.getElementById('persona-1').style.opacity = currentPersona === 1 ? '1' : '0';
+          document.getElementById('persona-2').style.opacity = currentPersona === 2 ? '1' : '0';
+          
+          // Update dots
+          document.getElementById('dot-1').style.background = currentPersona === 1 ? '#C41E3A' : '#e5e7eb';
+          document.getElementById('dot-2').style.background = currentPersona === 2 ? '#C41E3A' : '#e5e7eb';
+        }
+      </script>
 
       <section>
         <h2>Key Features</h2>
