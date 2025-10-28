@@ -113,7 +113,7 @@ p::first-line{letter-spacing:.2px}
   .hero{flex-direction:row;min-height:70vh;background:var(--cardinal);padding-top:0}
   .hero__text{flex:1 1 50%;text-align:left;background:#fff;border-right:6px solid var(--gold);border-radius:0;display:flex;flex-direction:column;justify-content:center}
   .hero__image{flex:1 1 50%;background:var(--cardinal);border-radius:0}
-  .cards{grid-template-columns:repeat(4, 1fr);gap:2.25rem}
+  .cards{grid-template-columns:repeat(2, 1fr);gap:2.25rem}
   .card__media{height:200px}
 }
 
