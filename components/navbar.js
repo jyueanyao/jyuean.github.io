@@ -2,10 +2,10 @@
 const createNavBar = () => {
   const navHTML = `
     <div class="container nav">
-        <div class="brand">
+        <a href="index.html" class="brand" style="text-decoration: none;">
           <img src="img/griffithtop.jpeg" alt="Jyue-An Yao" class="nav-avatar"> 
           <span class="brand-text">Jyue-An Yao</span>
-        </div>
+        </a>
       <nav class="nav__links" aria-label="Main navigation">
         <a href="index.html">Home</a>
         <a href="about.html">About</a>
