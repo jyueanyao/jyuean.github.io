@@ -74,11 +74,14 @@ body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
 .pill{background:white;border:1px solid var(--border);padding:.5rem .75rem;border-radius:999px;font-size:.95rem}
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 /* Cards grid via Flexbox */
 .cards{display:grid;grid-template-columns:repeat(2, 1fr);gap:var(--s4);width:100%;margin:0;box-sizing:border-box}
 .card-link{display:block;min-width:0;max-width:100%;box-sizing:border-box}
 .card{background:white;border:1px solid var(--border);border-radius:var(--r1);display:flex;flex-direction:column;overflow:hidden;transition:transform .15s ease;max-width:100%;box-sizing:border-box}
 =======
+=======
+>>>>>>> Stashed changes
 /* Cards grid via Flexbox (global default) */
 .cards{
   display: grid;
@@ -124,7 +127,11 @@ p::first-line{letter-spacing:.2px}
 /* Extra small screens - reduce padding */
 @media (max-width:700px) {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   .container{padding:0 var(--s2)}
+=======
+  .cards{ grid-template-columns: 1fr; }
+>>>>>>> Stashed changes
 =======
   .cards{ grid-template-columns: 1fr; }
 >>>>>>> Stashed changes
@@ -136,8 +143,13 @@ p::first-line{letter-spacing:.2px}
   .hero__text{flex:1 1 50%;text-align:left;background:#fff;border-right:6px solid var(--gold);border-radius:0;display:flex;flex-direction:column;justify-content:center}
   .hero__image{flex:1 1 50%;background:var(--cardinal);border-radius:0}
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   .cards{grid-template-columns:repeat(2, 1fr);gap:2.25rem;max-width:100%}
   .card__media{height:200px}
+=======
+  .cards{ grid-template-columns: repeat(2, 1fr); gap: 2.25rem; }
+  .card__media{height:170px}
+>>>>>>> Stashed changes
 =======
   .cards{ grid-template-columns: repeat(2, 1fr); gap: 2.25rem; }
   .card__media{height:170px}
