@@ -11,100 +11,101 @@
   <header class="header"></header>
   <script src="components/navbar.js"></script>
 
-  <main class="container projects-page">
+  <main class="container projects-page" style="padding: 4rem 0; background: #f8f9ff;">
     <section class="section">
-      <h1 class="section__title">Project Experiences</h1>
-      <p class="section__subtitle">Here are some of my selected works</p>
+      <div class="container">
+        <h1 class="section__title" style="text-align: center; margin-bottom: 1rem;">Project Experiences</h1>
+        <p class="section__subtitle" style="text-align: center; margin-bottom: 3rem;">Here are some of my selected works</p>
 
-      <div class="cards">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
 
-        <!-- Thrive (Move More) -->
-        <a href="thrive.html" class="card-link" style="text-decoration:none;color:inherit;">
-          <article class="card" id="project-thrive">
-            <div class="card__media"><img src="img/AHA/AHA red.png" alt="Thrive app mockup"></div>
-            <div class="card__body">
-              <h2 style="margin: 0; margin-bottom: 0.25rem;">Thrive</h2>
-              <!-- <p style="font-size: 0.85rem; color: #C41E3A; font-weight: 600; margin: 0 0 0.75rem 0;">Partnership Project with AHA</p> -->
-              <p class="card__meta">UIUX Designer/Researcher (Pro bono consulting) · Aug. 2025 - Present</p>
-              <p>An interactive, AI-powered fitness and wellness app inspired by the American Heart Association's Life's Essential 8</p>
-              <div class="tags">
-                <span class="tag">UIUX Design</span>
-                <span class="tag">Prototyping</span>
-                <span class="tag">User Journey Mapping</span>
-                <span class="tag">Healthcare</span>
+          <!-- Thrive (Move More) -->
+          <a href="thrive.html" style="text-decoration:none;color:inherit;">
+            <div style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 8px 30px rgba(0,0,0,.08); border: 1px solid #f0f0f0; transition: transform 0.2s ease, box-shadow 0.2s ease; height: 100%;">
+              <div style="aspect-ratio: 16/9; overflow: hidden; border-radius: 12px; margin-bottom: 1.5rem;">
+                <img src="img/AHA/AHA red.png" alt="Thrive app mockup" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <h3 style="color: var(--cardinal); margin-bottom: 0.5rem; font-size: 1.3rem;">Thrive</h3>
+              <p style="color: var(--ink-3); font-size: 0.9rem; margin-bottom: 0.75rem;">UIUX Designer/Researcher (Pro bono consulting) · Aug. 2025 - Present</p>
+              <p style="color: var(--ink-2); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.5;">An interactive, AI-powered fitness and wellness app inspired by the American Heart Association's Life's Essential 8</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink-2);">UIUX Design</span>
+                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink-2);">Prototyping</span>
+                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink-2);">User Journey Mapping</span>
+                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink-2);">Healthcare</span>
               </div>
             </div>
-          </article>
-        </a>
+          </a>
 
-        <!-- Portfolio Website -->
-        <!-- <a href="portfolio.html" class="card-link" style="text-decoration:none;color:inherit;">
-          <article class="card" id="project-portfolio">
-            <div class="card__media"><img src="img/website.png" alt="Multi-page portfolio website screenshot"></div>
-            <div class="card__body">
-              <h2>Portfolio Website</h2>
-              <p class="card__meta">HTML/CSS/JS · 2025</p>
-              <p>Flexbox-first multi-page site with transitions, accessibility, and jQuery interactions.</p>
-              <div class="tags">
-                <span class="tag">Front-end</span>
-                <span class="tag">Accessibility</span>
-                <span class="tag">jQuery</span>
+          <!-- Portfolio Website
+          <a href="portfolio.html" style="text-decoration:none;color:inherit;">
+            <div style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 8px 30px rgba(0,0,0,.08); border: 1px solid #f0f0f0; transition: transform 0.2s ease, box-shadow 0.2s ease; height: 100%;">
+              <div style="aspect-ratio: 16/9; overflow: hidden; border-radius: 12px; margin-bottom: 1.5rem;">
+                <img src="img/website.png" alt="Multi-page portfolio website screenshot" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <h3 style="color: var(--cardinal); margin-bottom: 0.5rem; font-size: 1.3rem;">Portfolio Website</h3>
+              <p style="color: var(--ink-3); font-size: 0.9rem; margin-bottom: 0.75rem;">HTML/CSS/JS · 2025</p>
+              <p style="color: var(--ink-2); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.5;">Flexbox-first multi-page site with transitions, accessibility, and jQuery interactions.</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink-2);">Front-end</span>
+                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink-2);">Accessibility</span>
+                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink-2);">jQuery</span>
               </div>
             </div>
-          </article>
-        </a> -->
+          </a> -->
 
-
-        <a href="easytap.html" class="card-link" style="text-decoration:none;color:inherit;">
-          <article class="card" id="project-easytap">
-            <div class="card__media"><img src="img/EasyTap/EasyTap.png" alt="EasyTap app mockup"></div>
-            <div class="card__body">
-              <h2>EasyTap</h2>
-              <p class="card__meta">UIUX Designer/Researcher · Aug. 2025 - Present</p>
-              <p>Detachable tap shoe for dancer.</p>
-              <div class="tags">
-                <span class="tag">Product Design</span>
-                <span class="tag">UIUX Design</span>
-                <span class="tag">User Research</span>
+          <!-- EasyTap -->
+          <a href="easytap.html" style="text-decoration:none;color:inherit;">
+            <div style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 8px 30px rgba(0,0,0,.08); border: 1px solid #f0f0f0; transition: transform 0.2s ease, box-shadow 0.2s ease; height: 100%;">
+              <div style="aspect-ratio: 16/9; overflow: hidden; border-radius: 12px; margin-bottom: 1.5rem;">
+                <img src="img/EasyTap/EasyTap.png" alt="EasyTap app mockup" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <h3 style="color: var(--cardinal); margin-bottom: 0.5rem; font-size: 1.3rem;">EasyTap</h3>
+              <p style="color: var(--ink-3); font-size: 0.9rem; margin-bottom: 0.75rem;">UIUX Designer/Researcher · Aug. 2025 - Present</p>
+              <p style="color: var(--ink-2); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.5;">Detachable tap shoe for dancer.</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink-2);">Product Design</span>
+                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink-2);">UIUX Design</span>
+                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink-2);">User Research</span>
               </div>
             </div>
-          </article>
-        </a>
+          </a>
 
-        <!-- TechCare -->
-        <a href="techcare.html" class="card-link" style="text-decoration:none;color:inherit;">
-          <article class="card" id="project-techcare">
-            <div class="card__media"><img src="img/Techcare/techcarelogo.png" alt="TechCare cover"></div>
-            <div class="card__body">
-              <h2>TechCare (Capstone Project)</h2>
-               <p class="card__meta">UIUX Designer · Researcher · Data Analyst Aug. 2020 – Dec. 2021</p>
-               <p>UX-based solution to improve efficiency in long-term care facilities.</p>
-               <div class="tags">
-                <span class="tag">AdobeXD</span>
-                <span class="tag">Prototyping</span>
-                <span class="tag">UX Research</span>
+          <!-- TechCare -->
+          <a href="techcare.html" style="text-decoration:none;color:inherit;">
+            <div style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 8px 30px rgba(0,0,0,.08); border: 1px solid #f0f0f0; transition: transform 0.2s ease, box-shadow 0.2s ease; height: 100%;">
+              <div style="aspect-ratio: 16/9; overflow: hidden; border-radius: 12px; margin-bottom: 1.5rem;">
+                <img src="img/Techcare/techcarelogo.png" alt="TechCare cover" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <h3 style="color: var(--cardinal); margin-bottom: 0.5rem; font-size: 1.3rem;">TechCare (Capstone Project)</h3>
+              <p style="color: var(--ink-3); font-size: 0.9rem; margin-bottom: 0.75rem;">UIUX Designer · Researcher · Data Analyst Aug. 2020 – Dec. 2021</p>
+              <p style="color: var(--ink-2); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.5;">UX-based solution to improve efficiency in long-term care facilities.</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink-2);">AdobeXD</span>
+                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink-2);">Prototyping</span>
+                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink-2);">UX Research</span>
               </div>
             </div>
-          </article>
-        </a>
+          </a>
 
-        <!-- Recycle Go -->
-        <a href="recycle.html" class="card-link" style="text-decoration:none;color:inherit;">
-          <article class="card" id="project-recycle">
-            <div class="card__media"><img src="img/Recycle.png" alt="Recycle Go cover"></div>
-            <div class="card__body">
-              <h2>Recycle Go</h2>
-              <p class="card__meta">UX Researcher  Mar. 2022 - Sept. 2022</p>
-              <p>Using Design Thinking to Address Packaging Waste.</p>
-              <div class="tags">
-                <span class="tag">UX Research</span>
-                <span class="tag">Design Thinking</span>
-                <span class="tag">UIUX Design</span>
+          <!-- Recycle Go -->
+          <a href="recycle.html" style="text-decoration:none;color:inherit;">
+            <div style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 8px 30px rgba(0,0,0,.08); border: 1px solid #f0f0f0; transition: transform 0.2s ease, box-shadow 0.2s ease; height: 100%;">
+              <div style="aspect-ratio: 16/9; overflow: hidden; border-radius: 12px; margin-bottom: 1.5rem;">
+                <img src="img/Recycle.png" alt="Recycle Go cover" style="width: 100%; height: 100%; object-fit: cover;">
+              </div>
+              <h3 style="color: var(--cardinal); margin-bottom: 0.5rem; font-size: 1.3rem;">Recycle Go</h3>
+              <p style="color: var(--ink-3); font-size: 0.9rem; margin-bottom: 0.75rem;">UX Researcher Mar. 2022 - Sept. 2022</p>
+              <p style="color: var(--ink-2); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.5;">Using Design Thinking to Address Packaging Waste.</p>
+              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
+                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink-2);">UX Research</span>
+                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink-2);">Design Thinking</span>
+                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink-2);">UIUX Design</span>
               </div>
             </div>
-          </article>
-        </a>
+          </a>
 
+        </div>
       </div>
     </section>
   </main>
