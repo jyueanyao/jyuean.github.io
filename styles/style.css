@@ -117,11 +117,34 @@ p::first-line{letter-spacing:.2px}
   .cards{grid-template-columns: 1fr}
 }
 
-/* Desktop hero layout - side by side */
+/* Desktop hero layout - keep vertical but improve styling */
 @media (min-width:900px){
-  .hero{flex-direction:row;min-height:70vh;background:var(--cardinal);padding-top:0}
-  .hero__text{flex:1 1 50%;text-align:left;background:#fff;border-right:6px solid var(--gold);border-radius:0;display:flex;flex-direction:column;justify-content:center}
-  .hero__image{flex:1 1 50%;background:var(--cardinal);border-radius:0}
+  .hero{
+    flex-direction:column; /* Keep vertical layout for all screen sizes */
+    min-height:auto;
+    background:white; /* Change from cardinal to white */
+    padding-top:0;
+  }
+  .hero__text{
+    flex:1 1 auto;
+    text-align:left; /* Keep text left-aligned for readability */
+    background:#fff;
+    border-right:none; /* Remove border since we're not side by side */
+    border-bottom:6px solid var(--gold); /* Add bottom border instead */
+    border-radius:0;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    padding:4rem 2rem; /* Increase padding for larger screens */
+    max-width:900px; /* Limit width for better readability */
+    margin:0 auto; /* Center the content block */
+  }
+  .hero__image{
+    flex:1 1 auto;
+    background:var(--cardinal);
+    border-radius:0;
+    max-height:500px; /* Limit height to prevent taking up too much space */
+  }
   .cards{grid-template-columns:repeat(2, 1fr);gap:2.25rem}
   .card__media{height:170px}
 }
