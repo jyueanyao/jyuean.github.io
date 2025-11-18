@@ -53,7 +53,7 @@
         </p>
       </div>
 
-      <!-- Four Column Info Layout like FlameKeepers -->
+      <!-- Four Column Info Layout -->
       <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 3rem; padding: 2rem 0; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">
         <div>
           <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">TIMELINE</h4>
@@ -153,16 +153,20 @@
 
       <section>
         <h2>Visual Design System</h2>
-        <p style="font-size: 1rem; color: #333; line-height: 1.6;">
+        <p style="font-size: 1rem; color: var(--text-color); line-height: 1.6;">
           The color palette and typography were designed to convey positivity, motivation, and inclusivity—
           aligning with AHA's brand tone and the app's mission to make healthy living approachable.
         </p>
-         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin: 2rem 0;">
-          <div>
-            <img src="img/AHA/font.png" alt="Thrive Typography" style="max-width: 100%; height: auto; border-radius: 12px;">
-          </div>
-          <div>
-            <img src="img/AHA/colorpalette.png" alt="Thrive Color Palette" style="max-width: 100%; height: auto; border-radius: 12px;">
+        
+        <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+          <h3 style="color: #FF9800; margin-top: 0;">Design Foundation</h3>
+          <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem;">
+            <div>
+              <img src="img/AHA/font.png" alt="Thrive Typography" style="max-width: 100%; height: auto; border-radius: 12px;">
+            </div>
+            <div>
+              <img src="img/AHA/colorpalette.png" alt="Thrive Color Palette" style="max-width: 100%; height: auto; border-radius: 12px;">
+            </div>
           </div>
         </div>
       </section>
@@ -192,50 +196,138 @@
             </ul>
           </div>
         </div>
-        <!-- TODO: 插入各功能的 UI 圖（4～8 張） -->
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin: 2rem 0;">
-          <div>
-            <img src="img/AHA/keyfeature1.png" alt="Thrive App Mockup" style="max-width: 100%; height: auto; border-radius: 12px;">
-          </div>
-          <div>
-            <img src="img/AHA/keyfeature2.png" alt="Thrive App Mockup" style="max-width: 100%; height: auto; border-radius: 12px;">
-          </div>
-          <div>
-            <img src="img/AHA/keyfeature3.png" alt="Thrive App Mockup" style="max-width: 100%; height: auto; border-radius: 12px;">
-          </div>
-          <div>
-            <img src="img/AHA/keyfeature4.png" alt="Thrive App Mockup" style="max-width: 100%; height: auto; border-radius: 12px;">
-          </div>
-          <div>
-            <img src="img/AHA/keyfeature5.png" alt="Thrive App Mockup" style="max-width: 100%; height: auto; border-radius: 12px;">
-          </div>
-        </div>
-
       </section>
 
       <section>
+        <h2>Interface Design & Prototypes</h2>
+        <p>The Thrive interface was designed to be engaging, motivational, and accessible for users of all fitness levels and technical backgrounds.</p>
+        
+        <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+          <h3 style="color: #FF9800; margin-top: 0;">Design Principles</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+            <div>
+              <h4 style="color: #374151; font-size: 0.95rem; margin-bottom: 0.5rem;">Gamification</h4>
+              <p style="font-size: 0.85rem; color: #6b7280;">Fun micro-challenges aligned with Life's Essential 8</p>
+            </div>
+            <div>
+              <h4 style="color: #374151; font-size: 0.95rem; margin-bottom: 0.5rem;">Personalization</h4>
+              <p style="font-size: 0.85rem; color: #6b7280;">AI-powered recommendations based on user preferences</p>
+            </div>
+            <div>
+              <h4 style="color: #374151; font-size: 0.95rem; margin-bottom: 0.5rem;">Community</h4>
+              <p style="font-size: 0.85rem; color: #6b7280;">Social features to foster motivation and support</p>
+            </div>
+            <div>
+              <h4 style="color: #374151; font-size: 0.95rem; margin-bottom: 0.5rem;">Accessibility</h4>
+              <p style="font-size: 0.85rem; color: #6b7280;">Inclusive design for users of all abilities</p>
+            </div>
+          </div>
+        </div>
 
+        <h3>Key Interface Features</h3>
+        <div style="position: relative; max-width: 800px; margin: 2rem auto; background: #f8f9fa; border-radius: 12px; overflow: hidden;">
+          <div id="prototype-slider" style="display: flex; transition: transform 0.3s ease;">
+            <div style="min-width: 100%; padding: 2rem; text-align: center;">
+              <img src="img/AHA/keyfeature1.png" alt="Onboarding & Personalization" style="max-width: 60%; height: auto; border-radius: 8px; margin-bottom: 1rem;">
+              <h4 style="color: #FF9800; margin: 0.5rem 0;">Onboarding & Personalization</h4>
+              <p style="font-size: 0.9rem; color: #6b7280;">Conversational intake process with tailored goal setting</p>
+            </div>
+            <div style="min-width: 100%; padding: 2rem; text-align: center;">
+              <img src="img/AHA/keyfeature2.png" alt="Game Center" style="max-width: 60%; height: auto; border-radius: 8px; margin-bottom: 1rem;">
+              <h4 style="color: #FF9800; margin: 0.5rem 0;">Game Center</h4>
+              <p style="font-size: 0.9rem; color: #6b7280;">Fun micro-challenges aligned to Life's Essential 8</p>
+            </div>
+            <div style="min-width: 100%; padding: 2rem; text-align: center;">
+              <img src="img/AHA/keyfeature3.png" alt="AI Health Companion" style="max-width: 60%; height: auto; border-radius: 8px; margin-bottom: 1rem;">
+              <h4 style="color: #FF9800; margin: 0.5rem 0;">AI Health Companion</h4>
+              <p style="font-size: 0.9rem; color: #6b7280;">Personalized nudges and health guidance</p>
+            </div>
+            <div style="min-width: 100%; padding: 2rem; text-align: center;">
+              <img src="img/AHA/keyfeature4.png" alt="Community & Social" style="max-width: 60%; height: auto; border-radius: 8px; margin-bottom: 1rem;">
+              <h4 style="color: #FF9800; margin: 0.5rem 0;">Community & Social</h4>
+              <p style="font-size: 0.9rem; color: #6b7280;">Inclusive challenges and peer support system</p>
+            </div>
+            <div style="min-width: 100%; padding: 2rem; text-align: center;">
+              <img src="img/AHA/keyfeature5.png" alt="Home Dashboard" style="max-width: 60%; height: auto; border-radius: 8px; margin-bottom: 1rem;">
+              <h4 style="color: #FF9800; margin: 0.5rem 0;">Home Dashboard</h4>
+              <p style="font-size: 0.9rem; color: #6b7280;">Daily missions, streaks, and progress tracking</p>
+            </div>
+          </div>
+          
+          <!-- Navigation buttons -->
+          <button id="prev-btn" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <span style="font-size: 18px;">‹</span>
+          </button>
+          <button id="next-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <span style="font-size: 18px;">›</span>
+          </button>
+          
+          <!-- Indicators -->
+          <div style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px;">
+            <span class="indicator active" style="width: 8px; height: 8px; border-radius: 50%; background: #FF9800; transition: all 0.3s;"></span>
+            <span class="indicator" style="width: 8px; height: 8px; border-radius: 50%; background: #ccc; transition: all 0.3s;"></span>
+            <span class="indicator" style="width: 8px; height: 8px; border-radius: 50%; background: #ccc; transition: all 0.3s;"></span>
+            <span class="indicator" style="width: 8px; height: 8px; border-radius: 50%; background: #ccc; transition: all 0.3s;"></span>
+            <span class="indicator" style="width: 8px; height: 8px; border-radius: 50%; background: #ccc; transition: all 0.3s;"></span>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        let currentSlide = 0;
+        const totalSlides = 5;
+        const slider = document.getElementById('prototype-slider');
+        const indicators = document.querySelectorAll('.indicator');
+        
+        function updateSlider() {
+          slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+          indicators.forEach((indicator, index) => {
+            indicator.style.background = index === currentSlide ? '#FF9800' : '#ccc';
+          });
+        }
+        
+        document.getElementById('next-btn').addEventListener('click', () => {
+          currentSlide = (currentSlide + 1) % totalSlides;
+          updateSlider();
+        });
+        
+        document.getElementById('prev-btn').addEventListener('click', () => {
+          currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+          updateSlider();
+        });
+      </script>
+
+      <section>
         <h2>Why It's Different</h2>
-        <ul>
-          <li>Community-centric design that fosters belonging and shared progress</li>
-          <li>Inclusive gamification across abilities and access levels</li>
-          <li>Rewards tied to meaningful, health-aligned behaviors</li>
-          <li>AI assistance that personalizes plans and demystifies health info</li>
-        </ul>
-      
+        <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+          <ul style="color: var(--text-color); margin: 0;">
+            <li>Community-centric design that fosters belonging and shared progress</li>
+            <li>Inclusive gamification across abilities and access levels</li>
+            <li>Rewards tied to meaningful, health-aligned behaviors</li>
+            <li>AI assistance that personalizes plans and demystifies health info</li>
+          </ul>
+        </div>
+        
         <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin: 2rem 0;">
           <div>
-            <img src="img/AHA/competitive analysis.png" alt="Thrive App Mockup" style="max-width: 100%; height: auto; border-radius: 12px;">
+            <img src="img/AHA/competitive analysis.png" alt="Competitive Analysis" style="max-width: 100%; height: auto; border-radius: 12px;">
           </div>
           <div>
-            <img src="img/AHA/Design Criteria.png" alt="Thrive App Mockup" style="max-width: 100%; height: auto; border-radius: 12px;">
+            <img src="img/AHA/Design Criteria.png" alt="Design Criteria" style="max-width: 100%; height: auto; border-radius: 12px;">
           </div>
         </div>
-        <h2>Why good fit for AHA?</h2>
+      </section>
 
+      <section>
+        <h2>Why Good Fit for AHA?</h2>
+        <p style="font-size: 1rem; color: var(--text-color); line-height: 1.6; margin-bottom: 2rem;">
+          Thrive aligns perfectly with the American Heart Association's mission by gamifying Life's Essential 8 
+          and making heart-healthy behaviors accessible to everyone.
+        </p>
         <div style="margin: 2rem 0;">
-          <img src="img/AHA/goodfit.png" alt="Thrive App Mockup" style="max-width: 100%; height: auto; border-radius: 12px;">
+          <img src="img/AHA/goodfit.png" alt="AHA Alignment" style="max-width: 100%; height: auto; border-radius: 12px;">
         </div>
+      </section>
 
       <!-- <h2>Design Process</h2> -->
         <!-- <ol>

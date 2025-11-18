@@ -22,174 +22,277 @@
       --ink-3: #6b7280;
       --cardinal: #8B0000;
       --gold: #FFD700;
-      --brand: linear-gradient(90deg, #8Bhttp: //127.0.0.1:3004/thrive.html0000, #FFD700);
-          --r1:14px; --r2:22px; --shadow-lg: 0 18px 40px rgba(17, 24, 39, .12);
-          --s1:.5rem; --s2:.75rem; --s3:1rem; --s4:1.5rem; --s5:2rem; --s6:3rem;
-          --card-w: min(980px, 92vw); http: //127.0.0.1:3004/thrive.html
-          --speed: .35s;
-      }
+      --brand: linear-gradient(90deg, #8B0000, #FFD700);
+      --r1:14px; 
+      --r2:22px; 
+      --shadow-lg: 0 18px 40px rgba(17, 24, 39, .12);
+      --s1:.5rem; 
+      --s2:.75rem; 
+      --s3:1rem; 
+      --s4:1.5rem; 
+      --s5:2rem; 
+      --s6:3rem;
+      --card-w: min(980px, 92vw);
+      --speed: .35s;
+    }
 
-      html, body {
-        height:100%
-      }
+    html, body {
+      height:100%;
+      margin: 0;
+      padding: 0;
+    }
 
-      body {
-        margin:0; background:var(--bg); font-family:Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color:var(--ink); line-height:1.6
-      }
+    body {
+      background:var(--bg); 
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      color:var(--ink); 
+      line-height:1.6
+    }
 
-      .site {
-        max-width:1100px; margin:0 auto; padding:0 var(--s3)
-      }
+    /* Hero Section Styles */
+    .hero {
+      background: linear-gradient(135deg, #FF9A8B 0%, #FFA07A 50%, #FF7F50 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      padding: 0;
+      position: relative;
+    }
 
-      header {
-        display:flex; justify-content:space-between; align-items:center; padding:var(--s3) 0
-      }
+    .hero-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+    }
 
-      .brand {
-        font-weight:800; letter-spacing:.2px
-      }
+    .hero-left {
+      color: black;
+      z-index: 2;
+    }
 
-      .brand__accent {
-        background:var(--brand); -webkit-background-clip:text; background-clip:text; color:transparent
-      }
+    .hero-left h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 700;
+      margin: 0 0 1.5rem 0;
+      line-height: 1.1;
+      color: black;
+    }
 
-      nav a {
-        padding:.3rem .6rem;
-        border-radius:999px;
-        text-decoration:none;
-        color:var(--ink-2);
-        border:1px solid transparent;
-        transition:all var(--speed) ease;
-        font-size:.9rem;
-      }
+    .hero-left .subtitle {
+      font-size: 1.25rem;
+      line-height: 1.6;
+      margin: 0 0 2rem 0;
+      color: #333;
+      max-width: 600px;
+    }
 
-      nav a:hover {
-        color:var(--ink); border-color:#e5e7eb; box-shadow:0 6px 18px rgba(0, 0, 0, .06)
-      }
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 2rem;
+    }
 
-      nav a:active {
-        transform:translateY(1px)
-      }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 0.875rem 1.5rem;
+      border-radius: 12px;
+      border: 2px solid transparent;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      font-weight: 600;
+    }
 
-      .card {
-        width:var(--card-w); background:#fff; border:1px solid #eef2f7; border-radius:var(--r2); box-shadow:var(--shadow-lg); overflow:hidden
-      }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+    }
 
-      .card__top {
-        display:grid; grid-template-columns: 220px 1fr; gap:var(--s5); padding:var(--s5); align-items:center
-      }
+    /* LinkedIn Button - Dark for contrast */
+    .btn.linkedin {
+      background: #333;
+      color: white;
+    }
 
-      .avatar {
-        aspect-ratio:1/1; border-radius:20px; overflow:hidden; border:1px solid #eee; box-shadow:0 10px 24px rgba(0, 0, 0, .06); transform:translateY(0); transition:all var(--speed) cubic-bezier(0.4, 0, 0.2, 1)
-      }
+    .btn.linkedin:hover {
+      background: #1a1a1a;
+    }
 
-      .avatar img {
-        width:100%; height:100%; object-fit:cover; transition:transform var(--speed) ease
-      }
+    /* Resume Button - White Background */
+    .btn.resume {
+      background: white;
+      color: #333;
+      border: 2px solid #333;
+    }
 
-      .avatar:hover {
-        transform:translateY(-8px); box-shadow:0 20px 40px rgba(0, 0, 0, .15)
-      }
+    .btn.resume:hover {
+      background: #f8f8f8;
+      color: #1a1a1a;
+      border-color: #1a1a1a;
+    }
 
-      .avatar:hover img {
-        transform:scale(1.03)
-      }
+    /* GitHub Button - Dark Gray */
+    .btn.github {
+      background: #24292f;
+      color: white;
+    }
 
-      .title {
-        font-family:"Playfair Display", serif; font-weight:700; font-size:clamp(1.6rem, 3.2vw, 2.4rem); margin:0
-      }
+    .btn.github:hover {
+      background: #1a1e22;
+    }
 
-      .subtitle {
-        color:var(--ink-2); margin:.25rem 0 0
-      }
+    .hero-right {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+    }
 
-      .tags {
-        display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.75rem
-      }
+    .hero-image {
+      width: 100%;
+      max-width: 500px;
+      aspect-ratio: 1;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      border: 6px solid rgba(255, 255, 255, 0.2);
+      background: rgba(255, 255, 255, 0.1);
+      padding: 8px;
+      backdrop-filter: blur(10px);
+    }
 
-      .tag {
-        font-size:.85rem; padding:.35rem .6rem; border-radius:999px; background:linear-gradient(90deg, #fff, #f8fafc); border:1px solid #e5e7eb
-      }
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 24px;
+    }
 
-      .cta {
-        display:flex; flex-wrap:wrap; gap:.6rem; margin-top:var(--s4)
-      }
+    /* Projects Section */
+    .home-projects {
+      padding: 5rem 0;
+      background: #f8f9ff;
+    }
 
-      .btn {
-        display:inline-flex; align-items:center; gap:.5rem; padding:.7rem 1.05rem; border-radius:12px; border:1px solid #e5e7eb; background:#fff; color:var(--ink); text-decoration:none; transition:transform var(--speed) ease, box-shadow var(--speed) ease, background var(--speed) ease
-      }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
 
-      .btn:hover {
-        transform:translateY(-2px); box-shadow:0 10px 24px rgba(0, 0, 0, .12)
-      }
+    .section__title {
+      text-align: center;
+      margin-bottom: 3rem;
+      font-size: 2.5rem;
+      color: var(--cardinal);
+    }
 
-      .btn:active {
-        transform:translateY(1px)
-      }
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
 
-      .btn--primary {
-        background:var(--brand); color:#fff; border-color:transparent; position:relative; overflow:hidden
-      }
+    .project-card {
+      background: white;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 8px 30px rgba(0,0,0,.08);
+      border: 1px solid #f0f0f0;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+      color: inherit;
+    }
 
-      .btn--primary::after {
-        content:""; position:absolute; inset:-40%; background:radial-gradient(circle at 30% 30%, rgba(255, 255, 255, .25), transparent 45%); transform:translateX(-30%) translateY(-30%) scale(.6); transition:transform .35s ease, opacity .35s ease; opacity:0
-      }
+    .project-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 15px 40px rgba(0,0,0,.12);
+    }
 
-      .btn--primary:hover::after {
-        transform:translateX(0) translateY(0) scale(1); opacity:1
-      }
+    .project-image {
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      border-radius: 12px;
+      margin-bottom: 1.5rem;
+    }
 
-      a:focus-visible, button:focus-visible, .btn:focus-visible {
-        outline: 3px solid #2563eb; outline-offset: 3px; border-radius: 12px;
-      }
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
 
-      .grid {
-        display:grid; grid-template-columns:1.2fr .8fr; gap:var(--s5); padding:0 var(--s5) var(--s5)
-      }
+    .project-title {
+      color: var(--cardinal);
+      margin-bottom: 0.5rem;
+      font-size: 1.3rem;
+    }
 
-      .panel {
-        background:#fff; border:1px solid #eef2f7; border-radius:18px; padding:var(--s4); box-shadow:0 12px 30px rgba(0, 0, 0, .06)
-      }
+    .project-meta {
+      color: var(--ink-2);
+      font-size: 0.9rem;
+      margin-bottom: 0.75rem;
+    }
 
-      .panel h3 {
-        margin-top:0
-      }
+    .project-description {
+      color: var(--ink);
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+      line-height: 1.5;
+    }
 
-      .list {
-        display:grid; gap:.6rem; margin:0; padding-left:1rem
-      }
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
 
-      .kv {
-        display:flex; gap:.8rem; align-items:center
-      }
+    .project-tag {
+      background: #f8f9ff;
+      border: 1px solid #e5e7eb;
+      padding: 0.25rem 0.75rem;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      color: var(--ink);
+    }
 
-      .kv b {
-        min-width:110px; color:var(--ink-2)
-      }
+    footer {
+      padding: 2rem 0;
+      color: var(--ink-3);
+      text-align: center;
+      background: white;
+    }
 
-      .divider {
-        height:4px; background:var(--brand); opacity:.25; margin:0 var(--s5)
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        text-align: center;
       }
-
-      footer {
-        padding:var(--s5) 0; color:var(--ink-3); text-align:center
+      
+      .hero-left h1 {
+        font-size: 2.5rem;
       }
-
-      @media (prefers-reduced-motion: reduce) {
-        * {
-          transition:none !important; animation:none !important
-        }
+      
+      .hero-actions {
+        justify-content: center;
       }
-
-      @media (max-width: 900px) {
-        .card__top {
-          grid-template-columns:1fr
-        }
-
-        .grid {
-          grid-template-columns:1fr
-        }
+      
+      .projects-grid {
+        grid-template-columns: 1fr;
       }
+    }
+  </style>
+
+
   </style>
 </head>
 
@@ -197,157 +300,113 @@
   <header class="header"></header>
   <script src="components/navbar.js"></script>
 
-  <section class="hero container">
-    <div class="hero__text">
-      <div class="title-container">
-        <h1><span>Hi there, this is Julia✨ 🙋🏻‍♀️ 👩🏻‍💻</span></h1>
-      </div>
-      <p>USC Product &amp; UI/UX Designer focused on turning complex user needs into clear, intuitive, and impact-driven product solutions. </p>
-      <p>Currently UIUX Designer @ American Heart Association</p>
-      <div class="hero__actions">
-      <div class="hero__actions">
-        <a class="btn btn--primary"
-          style="background:#0077b5; border-color:#0077b5;display:inline-flex;align-items:center;gap:.6rem;"
-          href="https://www.linkedin.com/in/juliayao333/" target="_blank" rel="noopener noreferrer">
-          <!-- LinkedIn icon -->
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-            style="display:inline-block;vertical-align:middle;background:#fff;border-radius:4px;padding:2px;">
-            <path
-              d="M4.98 3.5a2.25 2.25 0 11.001 4.5A2.25 2.25 0 014.98 3.5zM3 8.75h4v12H3v-12zM9.75 8.75H14v1.6c.6-1 2.05-1.6 3.35-1.6 3.2 0 3.9 2 3.9 4.6v7.4h-4v-6.55c0-1.56-.03-3.57-2.35-3.57-2.35 0-2.71 1.84-2.71 3.45V21.75h-4v-13z"
-              fill="#0077b5" />
-          </svg>
-          LinkedIn
-        </a>
-        <a class="btn btn--primary"
-          style="background:#8B0000; border-color:#8B0000;display:inline-flex;align-items:center;gap:.6rem;"
-          href="https://drive.google.com/file/d/1vvs_OoR8fpft6eY72Xvasdgzdr9kumvl/view?usp=drive_link" target="_blank"
-          rel="noopener noreferrer">
-          <!-- Resume / document icon -->
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="4" y="3" width="16" height="18" rx="2" fill="#fff" />
-            <circle cx="12" cy="9" r="2" fill="#8B0000" />
-            <path d="M8 15h8v1H8zM8 17h8v1H8z" fill="#8B0000" />
-          </svg> Resume
-        </a>
-        <a class="btn btn--primary"
-          style="background:#24292f; border-color:#24292f;display:inline-flex;align-items:center;gap:.5rem;"
-          href="https://github.com/jyueanyao" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"
-            style="display:inline-block;vertical-align:middle">
-            <path fill-rule="evenodd" clip-rule="evenodd"
-              d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.525.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.254-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 7.844c.85.004 1.705.115 2.504.338 1.909-1.295 2.747-1.025 2.747-1.025.546 1.378.202 2.396.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.847-2.337 4.695-4.566 4.944.359.309.678.92.678 1.855 0 1.339-.012 2.421-.012 2.751 0 .268.18.579.688.481C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"
-              fill="#fff" />
-          </svg>
-          GitHub
-        </a>
-      </div>
-    </div>
-    <div class="hero__image" aria-hidden="true">
-      <img src="img/foutain.jpeg" alt="Abstract portfolio cover artwork">
-      <a href="#about" class="scroll-prompt">
-        <p>Scroll Down to learn more about me</p>
-      </a>
-    </div>
-
-
-
-    <section class="section home-projects" style="padding: 4rem 0; background: #f8f9ff;">
-      <div class="container">
-        <h1 class="section__title" style="text-align: center; margin-bottom: 1rem;">Works & Projects</h1>
-        <!-- <p class="section__subtitle" style="text-align: center; margin-bottom: 3rem;">Here are some of my selected works</p> -->
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
-
-          <!-- Thrive (Move More) -->
-          <a href="thrive.html" style="text-decoration:none;color:inherit;">
-            <div style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 8px 30px rgba(0,0,0,.08); border: 1px solid #f0f0f0; transition: transform 0.2s ease, box-shadow 0.2s ease; height: 100%;">
-              <div style="aspect-ratio: 16/9; overflow: hidden; border-radius: 12px; margin-bottom: 1.5rem;">
-                <img src="img/AHA/AHA red.png" alt="Thrive app mockup" style="width: 100%; height: 100%; object-fit: cover;">
-              </div>
-              <h3 style="color: var(--cardinal); margin-bottom: 0.5rem; font-size: 1.3rem;">Thrive</h3>
-              <p style="color: var(--ink); font-size: 0.9rem; margin-bottom: 0.75rem;">UIUX Designer/Researcher (Pro bono consulting) · Aug. 2025 - Present</p>
-              <p style="color: var(--ink); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.5;">An interactive, AI-powered fitness and wellness app inspired by the American Heart Association's Life's Essential 8</p>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink);">UIUX Design</span>
-                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink);">Prototyping</span>
-                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink);">User Journey Mapping</span>
-                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink);">Healthcare</span>
-              </div>
-            </div>
-          </a>
-
-          <!-- Portfolio Website
-          <a href="portfolio.html" style="text-decoration:none;color:inherit;">
-            <div style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 8px 30px rgba(0,0,0,.08); border: 1px solid #f0f0f0; transition: transform 0.2s ease, box-shadow 0.2s ease; height: 100%;">
-              <div style="aspect-ratio: 16/9; overflow: hidden; border-radius: 12px; margin-bottom: 1.5rem;">
-                <img src="img/website.png" alt="Multi-page portfolio website screenshot" style="width: 100%; height: 100%; object-fit: cover;">
-              </div>
-              <h3 style="color: var(--cardinal); margin-bottom: 0.5rem; font-size: 1.3rem;">Portfolio Website</h3>
-              <p style="color: var(--ink-3); font-size: 0.9rem; margin-bottom: 0.75rem;">HTML/CSS/JS · 2025</p>
-              <p style="color: var(--ink-2); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.5;">Flexbox-first multi-page site with transitions, accessibility, and jQuery interactions.</p>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink-2);">Front-end</span>
-                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink-2);">Accessibility</span>
-                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink-2);">jQuery</span>
-              </div>
-            </div>
-          </a> -->
-
-          <!-- EasyTap -->
-          <a href="easytap.html" style="text-decoration:none;color:inherit;">
-            <div style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 8px 30px rgba(0,0,0,.08); border: 1px solid #f0f0f0; transition: transform 0.2s ease, box-shadow 0.2s ease; height: 100%;">
-              <div style="aspect-ratio: 16/9; overflow: hidden; border-radius: 12px; margin-bottom: 1.5rem;">
-                <img src="img/EasyTap/EasyTap.png" alt="EasyTap app mockup" style="width: 100%; height: 100%; object-fit: cover;">
-              </div>
-              <h3 style="color: var(--cardinal); margin-bottom: 0.5rem; font-size: 1.3rem;">EasyTap</h3>
-              <p style="color: var(--ink); font-size: 0.9rem; margin-bottom: 0.75rem;">UIUX Designer/Researcher · Aug. 2025 - Present</p>
-              <p style="color: var(--ink); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.5;">Detachable tap dance shoes for dancer</p>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink);">Product Design</span>
-                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink);">UIUX Design</span>
-                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink);">User Research</span>
-              </div>
-            </div>
-          </a>
-
-          <!-- TechCare -->
-          <a href="techcare.html" style="text-decoration:none;color:inherit;">
-            <div style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 8px 30px rgba(0,0,0,.08); border: 1px solid #f0f0f0; transition: transform 0.2s ease, box-shadow 0.2s ease; height: 100%;">
-              <div style="aspect-ratio: 16/9; overflow: hidden; border-radius: 12px; margin-bottom: 1.5rem;">
-                <img src="img/Techcare/combine.PNG" alt="TechCare cover" style="width: 100%; height: 100%; object-fit: cover;">
-              </div>
-              <h3 style="color: var(--cardinal); margin-bottom: 0.5rem; font-size: 1.3rem;">TechCare (Capstone Project)</h3>
-              <p style="color: var(--ink); font-size: 0.9rem; margin-bottom: 0.75rem;">UIUX Designer · Researcher · Data Analyst Aug. 2020 – Dec. 2021</p>
-              <p style="color: var(--ink); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.5;">UX-based solution to improve efficiency in long-term care facilities</p>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink);">AdobeXD</span>
-                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink);">Prototyping</span>
-                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink);">UX Research</span>
-              </div>
-            </div>
-          </a>
-
-          <!-- Recycle Go -->
-          <a href="recycle.html" style="text-decoration:none;color:inherit;">
-            <div style="background: white; border-radius: 20px; padding: 2rem; box-shadow: 0 8px 30px rgba(0,0,0,.08); border: 1px solid #f0f0f0; transition: transform 0.2s ease, box-shadow 0.2s ease; height: 100%;">
-              <div style="aspect-ratio: 16/9; overflow: hidden; border-radius: 12px; margin-bottom: 1.5rem;">
-                <img src="img/Recycle.png" alt="Recycle Go cover" style="width: 100%; height: 100%; object-fit: cover;">
-              </div>
-              <h3 style="color: var(--cardinal); margin-bottom: 0.5rem; font-size: 1.3rem;">Recycle Go</h3>
-              <p style="color: var(--ink); font-size: 0.9rem; margin-bottom: 0.75rem;">UX Researcher Mar. 2022 - Sept. 2022</p>
-              <p style="color: var(--ink); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.5;">Using Design Thinking to Address Packaging Waste</p>
-              <div style="display: flex; flex-wrap: wrap; gap: 0.5rem;">
-                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink);">UX Research</span>
-                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink);">Design Thinking</span>
-                <span style="background: #f8f9ff; border: 1px solid #e5e7eb; padding: 0.25rem 0.75rem; border-radius: 15px; font-size: 0.8rem; color: var(--ink);">UIUX Design</span>
-              </div>
-            </div>
-          </a>
-
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-left">
+        <h1>Creative<br>Portfolio</h1>
+        <div class="subtitle">
+          Product & UX designer with a computer science background. I turn complex problems into clear, intuitive products through user research, interaction design, and rapid prototyping.
         </div>
-      
+        <div class="hero-actions">
+          <a class="btn linkedin" href="https://www.linkedin.com/in/juliayao333/" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.98 3.5a2.25 2.25 0 11.001 4.5A2.25 2.25 0 014.98 3.5zM3 8.75h4v12H3v-12zM9.75 8.75H14v1.6c.6-1 2.05-1.6 3.35-1.6 3.2 0 3.9 2 3.9 4.6v7.4h-4v-6.55c0-1.56-.03-3.57-2.35-3.57-2.35 0-2.71 1.84-2.71 3.45V21.75h-4v-13z"/>
+            </svg>
+            LinkedIn
+          </a>
+          <a class="btn resume" href="https://drive.google.com/file/d/1vvs_OoR8fpft6eY72Xvasdgzdr9kumvl/view?usp=drive_link" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <rect x="4" y="3" width="16" height="18" rx="2" />
+              <circle cx="12" cy="9" r="2" />
+              <path d="M8 15h8v1H8zM8 17h8v1H8z" />
+            </svg>
+            Resume
+          </a>
+          <a class="btn github" href="https://github.com/jyueanyao" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.021c0 4.428 2.865 8.184 6.839 9.525.5.092.682-.217.682-.483 0-.237-.009-.868-.014-1.703-2.782.605-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.62.069-.608.069-.608 1.004.07 1.532 1.032 1.532 1.032.892 1.53 2.341 1.088 2.91.832.091-.647.35-1.088.636-1.339-2.221-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.254-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.025A9.564 9.564 0 0 1 12 7.844c.85.004 1.705.115 2.504.338 1.909-1.295 2.747-1.025 2.747-1.025.546 1.378.202 2.396.1 2.65.64.7 1.028 1.595 1.028 2.688 0 3.847-2.337 4.695-4.566 4.944.359.309.678.92.678 1.855 0 1.339-.012 2.421-.012 2.751 0 .268.18.579.688.481C19.138 20.2 22 16.447 22 12.021 22 6.484 17.523 2 12 2z"/>
+            </svg>
+            GitHub
+          </a>
+        </div>
       </div>
-    </section>
+      <div class="hero-right">
+        <div class="hero-image">
+          <img src="img/foutain.jpeg" alt="Julia Yao">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-projects">
+    <div class="container">
+      <h1 class="section__title">Works and Projects</h1>
+      <div class="projects-grid">
+        
+        <!-- Thrive -->
+        <a href="thrive.html" class="project-card">
+          <div class="project-image">
+            <img src="img/AHA/AHA red.png" alt="Thrive app mockup">
+          </div>
+          <h3 class="project-title">Thrive</h3>
+          <p class="project-meta">UIUX Designer/Researcher (Pro bono consulting) · Aug. 2025 - Present</p>
+          <p class="project-description">An interactive, AI-powered fitness and wellness app inspired by the American Heart Association's Life's Essential 8</p>
+          <div class="project-tags">
+            <span class="project-tag">UIUX Design</span>
+            <span class="project-tag">Prototyping</span>
+            <span class="project-tag">User Journey Mapping</span>
+            <span class="project-tag">Healthcare</span>
+          </div>
+        </a>
+
+        <!-- TechCare -->
+        <a href="techcare.html" class="project-card">
+          <div class="project-image">
+            <img src="img/Techcare/combine.PNG" alt="TechCare cover">
+          </div>
+          <h3 class="project-title">TechCare (Capstone Project)</h3>
+          <p class="project-meta">UIUX Designer · Researcher · Data Analyst Aug. 2020 – Dec. 2021</p>
+          <p class="project-description">UX-based solution to improve efficiency in long-term care facilities</p>
+          <div class="project-tags">
+            <span class="project-tag">AdobeXD</span>
+            <span class="project-tag">Prototyping</span>
+            <span class="project-tag">UX Research</span>
+          </div>
+        </a>
+
+        <!-- Recycle Go -->
+        <a href="recycle.html" class="project-card">
+          <div class="project-image">
+            <img src="img/Recycle.png" alt="Recycle Go cover">
+          </div>
+          <h3 class="project-title">Recycle Go</h3>
+          <p class="project-meta">UX Researcher Mar. 2022 - Sept. 2022</p>
+          <p class="project-description">Using Design Thinking to Address Packaging Waste</p>
+          <div class="project-tags">
+            <span class="project-tag">UX Research</span>
+            <span class="project-tag">Design Thinking</span>
+            <span class="project-tag">UIUX Design</span>
+          </div>
+        </a>
+
+        <!-- EasyTap -->
+        <a href="easytap.html" class="project-card">
+          <div class="project-image">
+            <img src="img/EasyTap/EasyTap.png" alt="EasyTap app mockup">
+          </div>
+          <h3 class="project-title">EasyTap</h3>
+          <p class="project-meta">UIUX Designer/Researcher · Aug. 2025 - Present</p>
+          <p class="project-description">Detachable tap dance shoes for dancer</p>
+          <div class="project-tags">
+            <span class="project-tag">Product Design</span>
+            <span class="project-tag">UIUX Design</span>
+            <span class="project-tag">User Research</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
 
   <footer class="footer">
     <div class="container footer__row" id="contact">
