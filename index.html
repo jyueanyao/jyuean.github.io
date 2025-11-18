@@ -51,7 +51,7 @@
 
     /* Hero Section Styles */
     .hero {
-      background: linear-gradient(135deg, #FF9A8B 0%, #FFA07A 50%, #FF7F50 100%);
+      background: white;
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -71,7 +71,7 @@
     }
 
     .hero-left {
-      color: black;
+      color: white;
       z-index: 2;
     }
 
@@ -80,14 +80,14 @@
       font-weight: 700;
       margin: 0 0 1.5rem 0;
       line-height: 1.1;
-      color: black;
+      color: white;
     }
 
     .hero-left .subtitle {
       font-size: 1.25rem;
       line-height: 1.6;
       margin: 0 0 2rem 0;
-      color: #333;
+      color: rgba(255, 255, 255, 0.9);
       max-width: 600px;
     }
 
@@ -115,27 +115,27 @@
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
     }
 
-    /* LinkedIn Button - Dark for contrast */
+    /* LinkedIn Button - Blue */
     .btn.linkedin {
-      background: #333;
+      background: #0077b5;
       color: white;
     }
 
     .btn.linkedin:hover {
-      background: #1a1a1a;
+      background: #005885;
     }
 
-    /* Resume Button - White Background */
+    /* Resume Button - White background */
     .btn.resume {
       background: white;
-      color: #333;
-      border: 2px solid #333;
+      color: #8B0000;
+      border: 2px solid white;
     }
 
     .btn.resume:hover {
       background: #f8f8f8;
-      color: #1a1a1a;
-      border-color: #1a1a1a;
+      color: #A50000;
+      border-color: #f8f8f8;
     }
 
     /* GitHub Button - Dark Gray */
@@ -278,6 +278,14 @@
         text-align: center;
       }
       
+      .hero-right {
+        order: -1; /* 讓照片在文字上面 */
+      }
+      
+      .hero-left {
+        order: 1;
+      }
+      
       .hero-left h1 {
         font-size: 2.5rem;
       }
@@ -303,9 +311,9 @@
   <section class="hero">
     <div class="hero-container">
       <div class="hero-left">
-        <h1>Creative<br>Portfolio</h1>
+        <h1>Hi, This is Julia👩🏻‍💻✨🤍</h1>
         <div class="subtitle">
-          Product & UX designer with a computer science background. I turn complex problems into clear, intuitive products through user research, interaction design, and rapid prototyping.
+          I am a UX designer with a background in information management and UIUX Design. With passion for UX design research, and Product Design.
         </div>
         <div class="hero-actions">
           <a class="btn linkedin" href="https://www.linkedin.com/in/juliayao333/" target="_blank" rel="noopener noreferrer">
@@ -320,7 +328,7 @@
               <circle cx="12" cy="9" r="2" />
               <path d="M8 15h8v1H8zM8 17h8v1H8z" />
             </svg>
-            Resume
+            My Resume
           </a>
           <a class="btn github" href="https://github.com/jyueanyao" target="_blank" rel="noopener noreferrer">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
