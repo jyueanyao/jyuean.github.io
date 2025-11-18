@@ -8,10 +8,20 @@
   <link rel="stylesheet" href="styles/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Jocky+One&display=swap" rel="stylesheet">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+  <!-- SF Pro Display font - using system font stack for SF -->
+  <style>
+    @supports (font-family: "SF Pro Display") {
+      :root {
+        --sf-font: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      }
+    }
+    @supports not (font-family: "SF Pro Display") {
+      :root {
+        --sf-font: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="header"></header>
@@ -28,8 +38,6 @@
 
     <section class="hero-full">
       <div class="hero-right">
-
-
         <div style="margin: 2rem 0;">
           <img src="./img/AHA/Thrive Topic.png" alt="Thrive App Mockup" style="max-width: 100%; height: auto; border-radius: 12px;">
         </div>
@@ -37,27 +45,51 @@
     </section>
 
     <section class="case">
-
-      <div class="meta grid">
-        <div><strong>Role</strong><br>UIUX Designer · Researcher</div>
-        <div><strong>Team</strong><br> UIUX Designer · Software Engineer · Social Designer</div>
-        <div><strong>Timeline</strong><br>Aug. 2025 - Present </div>
-        <div><strong>Tools</strong><br>Figma, FigJam, Google Suite</div>
+      <!-- Project Description -->
+      <div style="margin-bottom: 3rem;">
+        <h1 style="font-size: 3rem; font-weight: 900; color: var(--heading-color); margin-bottom: 1rem; font-family: var(--sf-font);">Thrive</h1>
+        <p style="font-size: 1.2rem; color: var(--text-color); line-height: 1.6; max-width: 800px;">
+          An interactive, AI-powered fitness and wellness app inspired by the American Heart Association's Life's Essential 8
+        </p>
       </div>
 
-      <!-- Impact Section moved to top -->
+      <!-- Four Column Info Layout like FlameKeepers -->
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 3rem; padding: 2rem 0; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">
+        <div>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">TIMELINE</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">Aug. 2025 - Present</p>
+          <p style="font-size: 0.8rem; color: var(--text-color);">[4+ Months]</p>
+        </div>
+        <div>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">TEAM</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">3 Cross-functional</p>
+          <p style="font-size: 0.9rem; color: var(--text-color);">consultants</p>
+        </div>
+        <div>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">ROLE</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">UIUX Designer,</p>
+          <p style="font-size: 0.9rem; color: var(--text-color);">UX Researcher</p>
+        </div>
+        <div>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">SKILLS</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">User Research, Prototyping</p>
+          <p style="font-size: 0.9rem; color: var(--text-color);">Journey Mapping, Healthcare UX</p>
+        </div>
+      </div>
+
+      <!-- Impact Section -->
       <section class="impact-grid" style="margin: 3rem 0;">
         <div>
-          <h3>Impact — For Users</h3>
-          <ul>
+          <h3 style="color: var(--heading-color); font-family: var(--sf-font);">Impact — For Users</h3>
+          <ul style="color: var(--text-color);">
             <li>Healthier, more active lifestyles via micro-habits</li>
             <li>Improved mental well-being through momentum & community</li>
             <li>Motivation sustained by rewards and visible progress</li>
           </ul>
         </div>
         <div>
-          <h3>Impact — For AHA</h3>
-          <ul>
+          <h3 style="color: var(--heading-color); font-family: var(--sf-font);">Impact — For AHA</h3>
+          <ul style="color: var(--text-color);">
             <li>Stronger mission reach and brand engagement</li>
             <li>Community activation around Life's Essential 8</li>
             <li>Data-driven insights for future programs</li>
@@ -251,11 +283,27 @@
   <style>
     .case {max-width: 960px; margin: 0 auto; padding: 24px;}
     .hero {text-align: center; margin-bottom: 24px;}
-    .hero h1 {font-size: 2rem; margin: 0 0 8px;}
-    .subtitle {color: #444; margin: 0 auto 8px; max-width: 720px;}
+    .hero h1 {font-size: 2rem; margin: 0 0 8px; font-family: var(--sf-font); color: var(--heading-color);}
+    .subtitle {color: var(--text-color); margin: 0 auto 8px; max-width: 720px; font-family: var(--sf-font);}
     .meta.grid {display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 12px; margin: 16px 0 24px;}
-    h2 {margin-top: 28px; font-size: 1.4rem; color: #C41E3A;}
-    h3 {margin-top: 12px; font-size: 1.1rem;}
+    
+    /* H2 styles - now using global settings */
+    h2 {
+      margin-top: 28px; 
+      font-size: 1.4rem; 
+      color: var(--heading-color);
+      font-family: var(--sf-font);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    
+    /* Body text styles - black color */
+    p, li, div, span {
+      font-family: var(--sf-font);
+      color: var(--text-color);
+    }
+    
+    h3 {margin-top: 12px; font-size: 1.1rem; font-family: var(--sf-font); color: var(--heading-color);}
     ul {padding-left: 18px;}
     .cols {columns: 2; column-gap: 24px;}
     .impact-grid {display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 16px;}

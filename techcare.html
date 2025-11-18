@@ -9,6 +9,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+  <!-- SF Pro Display font - using system font stack for SF -->
+  <style>
+    @supports (font-family: "SF Pro Display") {
+      :root {
+        --sf-font: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      }
+    }
+    @supports not (font-family: "SF Pro Display") {
+      :root {
+        --sf-font: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="header"></header>
@@ -23,10 +36,6 @@
 
     <section class="hero-full">
       <div class="hero-right">
-         <!-- <h2 style="font-size: 3.5rem; font-weight: 900; color: #0052a3; margin: 0; font-family: 'Jockey One', sans-serif;">TECHCARE</h2>
-        <p style="font-size: 1.5rem; color: #0052a3; margin: 0.5rem 0 2rem 0; font-family: 'Inter', sans-serif;">
-          Elderly Care Monitoring — BLE Technology for Dementia Support
-        </p>-->
         <div style="margin: 2rem 0;">
           <img src="./img/Techcare/techcarelogo.png" alt="TechCare Hero" style="max-width: 100%; height: auto; border-radius: 12px;">
         </div>
@@ -34,162 +43,523 @@
     </section>
 
     <section class="case">
-
-      <div class="meta grid">
-        <div><strong>Role</strong><br>UIUX Designer · Researcher · Data Analyst</div>
-        <div><strong>Team</strong><br>UIUX Designer · System Engineer · Data Analyst</div>
-        <div><strong>Timeline</strong><br>Aug. 2020 - Dec. 2021</div>
-        <div><strong>Tools</strong><br>Figma, AdobeXD, Excel</div>
+      <!-- Project Description -->
+      <div style="margin-bottom: 3rem;">
+        <h1 style="font-size: 3rem; font-weight: 900; color: var(--heading-color); margin-bottom: 1rem; font-family: var(--sf-font);">TechCare</h1>
+        <p style="font-size: 1.2rem; color: var(--text-color); line-height: 1.6; max-width: 800px;">
+          Elderly care monitoring system using BLE technology for dementia support, providing real-time location tracking and safety management
+        </p>
       </div>
 
-      <!-- Impact Section moved to top -->
-      <section class="impact-grid" style="margin: 3rem 0;">
+      <!-- Four Column Info Layout like FlameKeepers -->
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 3rem; padding: 2rem 0; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">
         <div>
-          <h3>Impact — For Caregivers</h3>
-          <ul>
-            <li>Reduced stress through real-time monitoring</li>
-            <li>Faster emergency response times</li>
-            <li>Better-organized shift handovers</li>
-            <li>Increased confidence in resident safety</li>
-          </ul>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">TIMELINE</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">Aug. 2020 - Dec. 2021</p>
+          <p style="font-size: 0.8rem; color: var(--text-color);">[1.5 Years]</p>
         </div>
         <div>
-          <h3>Impact — For Residents</h3>
-          <ul>
-            <li>Greater independence with safety net</li>
-            <li>Improved quality of care through proactive monitoring</li>
-            <li>Maintained dignity while supported</li>
-          </ul>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">TEAM</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">3 Cross-functional</p>
+          <p style="font-size: 0.9rem; color: var(--text-color);">specialists</p>
         </div>
-      </section>
+        <div>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">ROLE</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">UIUX Designer, Researcher</p>
+          <p style="font-size: 0.9rem; color: var(--text-color);">Data Analyst</p>
+        </div>
+        <div>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">SKILLS</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">UI/UX Design, Research</p>
+          <p style="font-size: 0.9rem; color: var(--text-color);">Data Analysis, BLE Technology</p>
+        </div>
+      </div>
 
-      <section>
-        <h2>Problem Statement</h2>
-        <p>
-          Caregivers in elderly care facilities face significant challenges: no real-time visibility of residents' locations, high stress from manual supervision, and inconsistent data during shift handovers. 
-        </p>
-      </section>
 
-      <section>
-        <h2>Opportunity Statement</h2>
-        <p>
-          <strong style="color: #0052a3;">How might we</strong> use IoT technology to provide caregivers with reliable, real-time monitoring while maintaining residents' dignity and autonomy?
-        </p>
-      </section>
 
+      <!-- 1. Expected Impact -->
       <section>
-        <h2>Solution</h2>
-        <p>
-          <strong style="color: #8B0000;">TechCare</strong> is a BLE-based monitoring system that tracks resident locations and wellbeing in real-time, helping caregivers respond quickly to emergencies while reducing manual workload and stress.
-        </p>
-      </section>
-
-      <h2>Persona</h2>
-      <section>
-        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin: 2rem 0;">
-          <div>
-            <img src="img/Techcare/newpersona.png" alt="TechCare Persona - Mei Chen" style="max-width: 100%; height: auto; border-radius: 12px;">
+        <h2>Expected Impact</h2>
+        <div style="background: #ecfdf5; padding: 2rem; border-radius: 12px; border: 1px solid #a7f3d0; margin: 2rem 0;">
+          <h3 style="color: #065f46; margin-top: 0;">Measurable Care Improvements</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+            <div style="text-align: center; background: white; padding: 1.5rem; border-radius: 8px;">
+              <div style="font-size: 2.5rem; font-weight: bold; color: #8B0000;">40%</div>
+              <p style="margin: 0.5rem 0 0; font-weight: 600;">Reduction in manual monitoring time</p>
+              <p style="font-size: 0.85rem; color: #6b7280;">From 2-hour checks to real-time awareness</p>
+            </div>
+            <div style="text-align: center; background: white; padding: 1.5rem; border-radius: 8px;">
+              <div style="font-size: 2.5rem; font-weight: bold; color: #8B0000;">60%</div>
+              <p style="margin: 0.5rem 0 0; font-weight: 600;">Faster emergency response</p>
+              <p style="font-size: 0.85rem; color: #6b7280;">Immediate alerts vs. delayed discovery</p>
+            </div>
+            <div style="text-align: center; background: white; padding: 1.5rem; border-radius: 8px;">
+              <div style="font-size: 2.5rem; font-weight: bold; color: #8B0000;">3x</div>
+              <p style="margin: 0.5rem 0 0; font-weight: 600;">Increased resident mobility</p>
+              <p style="font-size: 0.85rem; color: #6b7280;">Safe free movement throughout facility</p>
+            </div>
           </div>
         </div>
-      </section>
 
-      <section>
-        <h2>Journey Map</h2>
-        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin: 2rem 0;">
-          <img src="img/Techcare/NewJourneyMap.png" alt="TechCare Journey Map" style="width: 100%; height: auto; border-radius: 12px;">
-        </div>
-        <p style="font-size: 1rem; color: #333; line-height: 1.6;">The journey map illustrates a caregiver's daily workflow, highlighting pain points during shift changes, emergency responses, and routine monitoring tasks.</p>
-      </section>
-
-      <section>
-        <h2>Information Architecture</h2>
-        <p style="font-size: 1rem; color: #333; line-height: 1.6; margin-bottom: 2rem;">The system is organized around three main user roles (Caregivers, Administrators, and Residents) with a clear navigation structure that prioritizes real-time information access and emergency response capabilities.</p>
-        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin: 2rem 0;">
-          <img src="./img/Techcare/Information Architecture.png" alt="TechCare Information Architecture" style="width: 100%; height: auto; border-radius: 12px;">
-        </div>
-      </section>
-
-      <section>
-        <!-- <h2>Key Features</h2>
-          <div>
-            <ul class="cols">
-              <li><strong>Real-Time Dashboard</strong> — location tracking and status overview</li>
-              <li><strong>Alert System</strong> — immediate notifications for emergencies</li>
-              <li><strong>Historical Data</strong> — activity logs for shift handovers</li>
-              <li><strong>Simple Interface</strong> — designed for non-tech-savvy users</li>
-              <li><strong>Cross-Device Support</strong> — desktop, tablet, and mobile access</li>
+        <h3>System Innovation Achievements</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+          <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #3b82f6;">
+            <h4 style="color: #1e40af; margin-top: 0; font-size: 1rem;">Technical Innovation</h4>
+            <ul style="margin: 0;">
+              <li><strong>BLE Integration:</strong> Low-power, reliable positioning system</li>
+              <li><strong>MQTT Protocol:</strong> Efficient real-time data transmission</li>
+              <li><strong>Scalable Architecture:</strong> Support for 100+ residents</li>
+              <li><strong>Cross-platform Interface:</strong> Desktop, tablet, mobile access</li>
             </ul>
           </div>
-        </div> -->
-        <h2>High-Fidelity Prototype</h2>
-        <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin: 2rem 0;">
-          <div class="feature-card" style="position: relative; overflow: hidden; border-radius: 12px;">
-            <img src="img/Techcare/Login.png" alt="TechCare Login" style="max-width: 100%; height: auto; border-radius: 12px; display: block;">
-            <div class="feature-label" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(218, 180, 105, 0.95); color: #333; padding: 0.75rem 1rem; transform: translateY(100%); transition: transform 0.3s ease;">
-              <strong>Login</strong><br><span style="font-size: 0.85rem;">Secure authentication</span>
+          <div style="background: #f8fafc; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #8b5cf6;">
+            <h4 style="color: #7c3aed; margin-top: 0; font-size: 1rem;">UX Innovation</h4>
+            <ul style="margin: 0;">
+              <li><strong>Context-aware Personalization:</strong> Auto-triggered cultural experiences</li>
+              <li><strong>Intuitive Care Interface:</strong> Designed for busy healthcare staff</li>
+              <li><strong>Multi-generational Design:</strong> Accessible to veteran residents</li>
+              <li><strong>Stress-reduction Focus:</strong> Calming, familiar interaction patterns</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2. Background (include cultural & emotional benefits) -->
+      <section>
+        <h2>Project Background</h2>
+        <div style="background: #fef9e7; padding: 2rem; border-radius: 12px; border-left: 4px solid #f59e0b; margin: 2rem 0;">
+          <h3 style="color: #92400e; margin-top: 0;">Banqiao Veterans Home - Project Context</h3>
+          <p><strong>Target Facility:</strong> A long-term care center specifically serving veterans who came to Taiwan with the KMT government, providing specialized care for elderly residents with dementia.</p>
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+            <div style="background: white; padding: 1.5rem; border-radius: 8px;">
+              <h4 style="color: #8B0000; margin-top: 0; font-size: 1rem;">Staffing Challenge</h4>
+              <ul style="margin-bottom: 0;">
+                <li><strong>5 nurses</strong> - Each caring for 20-24 residents (100 beds total)</li>
+                <li><strong>16 care assistants</strong> - Each caring for 5-6 residents</li>
+                <li>Multiple rooms per floor with limited supervision</li>
+              </ul>
+            </div>
+            <div style="background: white; padding: 1.5rem; border-radius: 8px;">
+              <h4 style="color: #8B0000; margin-top: 0; font-size: 1rem;">Current Solutions</h4>
+              <ul style="margin-bottom: 0;">
+                <li><strong>Listening Station</strong> - Music therapy area</li>
+                <li><strong>Virtual Train Station</strong> - Nostalgic experience</li>
+                <li><strong>Art Classes</strong> - Calligraphy, painting workshops</li>
+                <li><strong>Board Games</strong> - Chess and traditional games</li>
+              </ul>
             </div>
           </div>
           
-          <div class="feature-card" style="position: relative; overflow: hidden; border-radius: 12px;">
-            <img src="img/Techcare/LoginFail.png" alt="TechCare Login Error" style="max-width: 100%; height: auto; border-radius: 12px; display: block;">
-            <div class="feature-label" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(218, 180, 105, 0.95); color: #333; padding: 0.75rem 1rem; transform: translateY(100%); transition: transform 0.3s ease;">
-              <strong>Password Fill In Failed</strong><br><span style="font-size: 0.85rem;">Error handling</span>
-            </div>
+          <div style="background: #fef2f2; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #dc2626; margin-top: 1.5rem;">
+            <h4 style="color: #dc2626; margin-top: 0; font-size: 1rem;">Core Dilemma</h4>
+            <p style="margin-bottom: 0;"><strong>Safety vs. Freedom:</strong> Staff must restrict resident movement to ensure safety, but this limitation negatively impacts residents' emotional well-being and increases care difficulty. The challenge is enabling safe free movement while maintaining real-time location awareness.</p>
           </div>
-          
-          <div class="feature-card" style="position: relative; overflow: hidden; border-radius: 12px;">
-            <img src="img/Techcare/user manage.jpg" alt="TechCare Create New User" style="max-width: 100%; height: auto; border-radius: 12px; display: block;">
-            <div class="feature-label" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(218, 180, 105, 0.95); color: #333; padding: 0.75rem 1rem; transform: translateY(100%); transition: transform 0.3s ease;">
-              <strong>Create New User</strong><br><span style="font-size: 0.85rem;">User registration</span>
+        </div>
+
+        <h3>Taiwan's Aging Crisis</h3>
+        <p>As Taiwan rapidly enters a super-aged society, long-term care facilities face unprecedented challenges. By 2025, approximately 290,000 people will have dementia, yet medical resources cannot accommodate everyone in institutional care, creating enormous demand for care innovation.</p>
+        
+        <div style="background: #f0f9ff; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+          <h4 style="color: #1e40af; margin-top: 0;">Motivation for Innovation</h4>
+          <ul>
+            <li><strong>2025:</strong> Taiwan entering super-aged society</li>
+            <li><strong>~290,000 people</strong> projected to have dementia</li>
+            <li><strong>Limited institutional capacity</strong> - Not all can enter care facilities</li>
+            <li><strong>Growing demand</strong> for specialized dementia care solutions</li>
+          </ul>
+        </div>
+
+        <h3>Cultural & Emotional Benefits</h3>
+        <div style="background: #fef7ed; padding: 2rem; border-radius: 8px; margin: 2rem 0;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+            <div>
+              <h4 style="color: #c2410c; margin-top: 0; font-size: 1.1rem;">Nostalgic Comfort</h4>
+              <ul>
+                <li><strong>Reduced homesickness</strong> through personalized cultural experiences</li>
+                <li><strong>Emotional stability</strong> via familiar music and hometown connections</li>
+                <li><strong>Cognitive stimulation</strong> through memory-triggering content</li>
+                <li><strong>Social engagement</strong> around shared cultural backgrounds</li>
+              </ul>
             </div>
-          </div>
-          
-          <div class="feature-card" style="position: relative; overflow: hidden; border-radius: 12px;">
-            <img src="img/Techcare/Location.png" alt="TechCare Alert System" style="max-width: 100%; height: auto; border-radius: 12px; display: block;">
-            <div class="feature-label" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(218, 180, 105, 0.95); color: #333; padding: 0.75rem 1rem; transform: translateY(100%); transition: transform 0.3s ease;">
-              <strong>Alert System</strong><br><span style="font-size: 0.85rem;">Real-time notifications</span>
-            </div>
-          </div>
-          
-          <div class="feature-card" style="position: relative; overflow: hidden; border-radius: 12px;">
-            <img src="img/Techcare/Record.jpg" alt="TechCare Activities Record" style="max-width: 100%; height: auto; border-radius: 12px; display: block;">
-            <div class="feature-label" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(218, 180, 105, 0.95); color: #333; padding: 0.75rem 1rem; transform: translateY(100%); transition: transform 0.3s ease;">
-              <strong>Activities Record</strong><br><span style="font-size: 0.85rem;">Historical logging</span>
-            </div>
-          </div>
-    
-          
-          <div class="feature-card" style="position: relative; overflow: hidden; border-radius: 12px;">
-            <img src="img/Techcare/Journal.png" alt="TechCare Journal Dashboard" style="max-width: 100%; height: auto; border-radius: 12px; display: block;">
-            <div class="feature-label" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(218, 180, 105, 0.95); color: #333; padding: 0.75rem 1rem; transform: translateY(100%); transition: transform 0.3s ease;">
-              <strong>Journal Dashboard</strong><br><span style="font-size: 0.85rem;">Activity overview</span>
-            </div>
-          </div>
-          
-          <div class="feature-card" style="position: relative; overflow: hidden; border-radius: 12px;">
-            <img src="img/Techcare/User.png" alt="TechCare User Management" style="max-width: 100%; height: auto; border-radius: 12px; display: block;">
-            <div class="feature-label" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(218, 180, 105, 0.95); color: #333; padding: 0.75rem 1rem; transform: translateY(100%); transition: transform 0.3s ease;">
-              <strong>User Management</strong><br><span style="font-size: 0.85rem;">Admin control</span>
+            <div>
+              <h4 style="color: #c2410c; margin-top: 0; font-size: 1.1rem;">Data-Driven Care</h4>
+              <ul>
+                <li><strong>Activity participation insights</strong> for personalized care plans</li>
+                <li><strong>Behavioral pattern analysis</strong> for early intervention</li>
+                <li><strong>Family engagement reports</strong> showing resident well-being</li>
+                <li><strong>Facility optimization</strong> based on usage patterns</li>
+              </ul>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- <section>
-        <h2>Design Approach</h2>
-        <p>
-          Empathy-driven design focused on reducing caregiver stress without sacrificing resident privacy. The interface prioritizes clarity, accessibility, and quick decision-making in high-pressure situations.
-        </p>
-
-        <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin: 2rem 0;">
-          <div>
-            <img src="img/Techcare-UserResearch.png" alt="TechCare Research" style="max-width: 100%; height: auto; border-radius: 12px;">
-          </div>
-          <div>
-            <img src="img/Techcare-DesignSystem.png" alt="TechCare Design System" style="max-width: 100%; height: auto; border-radius: 12px;">
+      <!-- 3. Problem Statement -->
+      <section>
+        <h2>Problem Statement</h2>
+        <div style="background: #fff5f5; padding: 2rem; border-radius: 12px; border: 1px solid #fecaca; margin: 2rem 0;">
+          <h3 style="color: #dc2626; margin-top: 0;">Key Pain Points Identified</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+            <div>
+              <h4 style="color: #8B0000; font-size: 1rem;">For Caregivers</h4>
+              <ul>
+                <li>Manual location checking every 2 hours</li>
+                <li>High stress during emergency situations</li>
+                <li>Inconsistent shift handover information</li>
+                <li>No real-time visibility of resident status</li>
+              </ul>
+            </div>
+            <div>
+              <h4 style="color: #8B0000; font-size: 1rem;">For Residents</h4>
+              <ul>
+                <li>Loss of privacy during frequent checks</li>
+                <li>Delayed emergency response</li>
+                <li>Inconsistent care quality</li>
+                <li>Feeling of being constantly watched</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </section> -->
+      </section>
+
+      <!-- 4. Research Methodology -->
+      <section>
+        <h2>Research Methodology</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+          <div style="background: #f8f9ff; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #8B0000;">
+            <h3 style="color: #8B0000; margin-top: 0;">Field Research</h3>
+            <ul>
+              <li>On-site observation at elderly care facilities</li>
+              <li>Caregiver interviews and workflow analysis</li>
+              <li>Identification of daily operational pain points</li>
+              <li>Current technology usage assessment</li>
+            </ul>
+          </div>
+          <div style="background: #f8f9ff; padding: 1.5rem; border-radius: 12px; border-left: 4px solid #8B0000;">
+            <h3 style="color: #8B0000; margin-top: 0;">Technical Research</h3>
+            <ul>
+              <li>BLE (Bluetooth Low Energy) technology evaluation</li>
+              <li>Indoor positioning system design</li>
+              <li>Database architecture planning</li>
+              <li>Real-time monitoring system requirements</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Persona -->
+      <section>
+        <h2>User Persona</h2>
+        <p>Based on our field research, we identified key user personas representing different stakeholders in the care ecosystem:</p>
+        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin: 2rem 0;">
+          <div>
+            <img src="img/Techcare/newpersona.png" alt="TechCare Persona - Primary Caregiver" style="max-width: 100%; height: auto; border-radius: 12px;">
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. User Journey Map -->
+      <section>
+        <h2>User Journey Mapping</h2>
+        <p>We mapped the complete caregiver workflow to identify critical touchpoints and opportunities for improvement:</p>
+        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin: 2rem 0;">
+          <img src="img/Techcare/NewJourneyMap.png" alt="TechCare User Journey Map" style="width: 100%; height: auto; border-radius: 12px;">
+        </div>
+        <div style="background: #fef3c7; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #f59e0b; margin-top: 1rem;">
+          <h4 style="color: #92400e; margin-top: 0;">Key Insights from Journey Mapping</h4>
+          <ul>
+            <li><strong>Peak stress moments:</strong> Emergency situations and shift handovers</li>
+            <li><strong>Time inefficiencies:</strong> Manual location checks every 2 hours</li>
+            <li><strong>Information gaps:</strong> Lack of real-time status updates</li>
+            <li><strong>Technology barriers:</strong> Complex interfaces increase cognitive load</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- 7. Current Solution (with images) -->
+      <section>
+        <h2>Current Solutions at Banqiao Veterans Home</h2>
+        <p>The facility currently provides various activities and therapeutic environments to support resident wellbeing:</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+          <div style="background: #f8fafc; padding: 2rem; border-radius: 12px;">
+            <img src="img/Techcare/listening-station.jpg" alt="Listening Station" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+            <h3 style="color: #8B0000; margin-top: 0;">🎵 Listening Station</h3>
+            <p>Music therapy area where residents can enjoy familiar songs and melodies from their era, providing emotional comfort and memory stimulation.</p>
+          </div>
+          
+          <div style="background: #f8fafc; padding: 2rem; border-radius: 12px;">
+            <img src="img/Techcare/train-station.jpg" alt="Virtual Train Station" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+            <h3 style="color: #8B0000; margin-top: 0;">🚂 Virtual Train Station</h3>
+            <p>Nostalgic environment recreating the experience of train travel, helping residents connect with memories of their homeland.</p>
+          </div>
+          
+          <div style="background: #f8fafc; padding: 2rem; border-radius: 12px;">
+            <img src="img/Techcare/art-classes.jpg" alt="Art Classes" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+            <h3 style="color: #8B0000; margin-top: 0;">🎨 Art Classes</h3>
+            <p>Traditional calligraphy and painting workshops that engage residents in familiar cultural activities and cognitive stimulation.</p>
+          </div>
+          
+          <div style="background: #f8fafc; padding: 2rem; border-radius: 12px;">
+            <img src="img/Techcare/board-games.jpg" alt="Board Games" style="width: 100%; height: 200px; object-fit: cover; border-radius: 8px; margin-bottom: 1rem;">
+            <h3 style="color: #8B0000; margin-top: 0;">♟️ Board Games</h3>
+            <p>Chess and traditional games that promote social interaction and maintain cognitive function through strategic thinking.</p>
+          </div>
+        </div>
+
+        <div style="background: #fff1f2; padding: 2rem; border-radius: 8px; border-left: 4px solid #f43f5e; margin: 2rem 0;">
+          <h4 style="color: #dc2626; margin-top: 0;">Limitations of Current Solutions</h4>
+          <ul>
+            <li><strong>Manual Supervision Required:</strong> All activities need constant staff oversight</li>
+            <li><strong>Limited Mobility:</strong> Residents must stay in designated areas for safety</li>
+            <li><strong>No Real-time Tracking:</strong> Staff cannot monitor resident locations during activities</li>
+            <li><strong>Safety Concerns:</strong> Risk of wandering during transitions between activities</li>
+            <li><strong>Resource Intensive:</strong> High staff-to-resident ratio required for supervision</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Solution Design</h2>
+        <div style="background: #f0f9ff; padding: 2rem; border-radius: 12px; border: 1px solid #bfdbfe; margin: 2rem 0;">
+          <h3 style="color: #1d4ed8; margin-top: 0;">TechCare System & Information Architecture</h3>
+          <p><strong>Integrated BLE-based Monitoring & Personalization System</strong> that combines real-time location tracking with personalized care experiences, specifically designed for veteran residents.</p>
+          
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+            <div style="background: white; padding: 1.5rem; border-radius: 8px;">
+              <h4 style="color: #8B0000; font-size: 1rem; margin-top: 0;">🏷️ BLE Tracking Layer</h4>
+              <ul>
+                <li>Personal BLE tags for each resident</li>
+                <li>Strategic receiver placement throughout facility</li>
+                <li>Real-time location monitoring system</li>
+                <li>Emergency alert capabilities</li>
+              </ul>
+            </div>
+            <div style="background: white; padding: 1.5rem; border-radius: 8px;">
+              <h4 style="color: #8B0000; font-size: 1rem; margin-top: 0;">💾 Personalization Database</h4>
+              <ul>
+                <li>Individual resident profiles & preferences</li>
+                <li>Hometown backgrounds & cultural data</li>
+                <li>Music preferences & nostalgic content</li>
+                <li>Activity participation tracking</li>
+              </ul>
+            </div>
+            <div style="background: white; padding: 1.5rem; border-radius: 8px;">
+              <h4 style="color: #8B0000; font-size: 1rem; margin-top: 0;">🎵 Experience Integration</h4>
+              <ul>
+                <li><strong>Listening Station:</strong> Auto-plays preferred music</li>
+                <li><strong>Virtual Train Station:</strong> Hometown-specific announcements</li>
+                <li>Nostalgic video content based on origin</li>
+                <li>Cultural comfort through personalization</li>
+              </ul>
+            </div>
+          </div>
+
+          <div style="margin-top: 3rem;">
+            <h4 style="color: #1d4ed8; margin-bottom: 1.5rem;">System Information Hierarchy</h4>
+            <p>We designed a clear system hierarchy that prioritizes emergency response capabilities while maintaining easy access to routine monitoring functions:</p>
+            <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin: 1.5rem 0;">
+              <img src="./img/Techcare/Information Architecture.png" alt="TechCare Information Architecture" style="width: 100%; height: auto; border-radius: 12px;">
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 2rem;">
+              <div style="background: #f0f9ff; padding: 1.5rem; border-radius: 8px;">
+                <h4 style="color: #1e40af; margin-top: 0; font-size: 1rem;">🏠 Dashboard Level</h4>
+                <p style="font-size: 0.9rem;">Quick overview of all residents and facility status</p>
+              </div>
+              <div style="background: #f0f9ff; padding: 1.5rem; border-radius: 8px;">
+                <h4 style="color: #1e40af; margin-top: 0; font-size: 1rem;">👤 Individual Level</h4>
+                <p style="font-size: 0.9rem;">Detailed resident information and history</p>
+              </div>
+              <div style="background: #f0f9ff; padding: 1.5rem; border-radius: 8px;">
+                <h4 style="color: #1e40af; margin-top: 0; font-size: 1rem;">⚙️ Management Level</h4>
+                <p style="font-size: 0.9rem;">System settings and user administration</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <h3>Innovative Personalized Care Features</h3>
+        <div style="background: #fef7ed; padding: 2rem; border-radius: 12px; border-left: 4px solid #f97316; margin: 2rem 0;">
+          <h4 style="color: #c2410c; margin-top: 0;">🏮 Cultural Comfort & Nostalgia</h4>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            <div>
+              <h5 style="color: #8B0000; font-size: 1rem; margin-bottom: 1rem;">� Virtual Train Station Experience</h5>
+              <ul>
+                <li><strong>Personalized Announcements:</strong> Platform broadcasts in resident's hometown dialect</li>
+                <li><strong>Scenic Journey Videos:</strong> Window views of familiar landscapes from their homeland</li>
+                <li><strong>Emotional Connection:</strong> Recreates the journey "home" to provide comfort</li>
+                <li><strong>Automatic Activation:</strong> Triggered when resident approaches the station area</li>
+              </ul>
+            </div>
+            <div>
+              <h5 style="color: #8B0000; font-size: 1rem; margin-bottom: 1rem;">🎵 Smart Listening Station</h5>
+              <ul>
+                <li><strong>Personal Music Library:</strong> Songs from resident's era and preferences</li>
+                <li><strong>Mood-based Selection:</strong> Music therapy adapted to individual needs</li>
+                <li><strong>Memory Stimulation:</strong> Familiar melodies to slow cognitive decline</li>
+                <li><strong>Social Interaction:</strong> Group listening experiences with compatible preferences</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <h3>Care Management Benefits</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+          <div style="background: #ecfdf5; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #10b981;">
+            <h4 style="color: #047857; margin-top: 0; font-size: 1rem;">👩‍⚕️ For Care Staff</h4>
+            <ul>
+              <li>Real-time location visibility for all residents</li>
+              <li>Automated activity participation tracking</li>
+              <li>Reduced need for physical restriction</li>
+              <li>Faster new staff orientation</li>
+            </ul>
+          </div>
+          <div style="background: #fef3c7; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #f59e0b;">
+            <h4 style="color: #92400e; margin-top: 0; font-size: 1rem;">👴 For Residents</h4>
+            <ul>
+              <li>Increased freedom of movement</li>
+              <li>Personalized cultural experiences</li>
+              <li>Emotional comfort through nostalgia</li>
+              <li>Maintained dignity and independence</li>
+            </ul>
+          </div>
+          <div style="background: #f3e8ff; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #a855f7;">
+            <h4 style="color: #7c2d92; margin-top: 0; font-size: 1rem;">👨‍👩‍👧‍👦 For Families</h4>
+            <ul>
+              <li>Detailed activity reports and insights</li>
+              <li>Peace of mind through real-time monitoring</li>
+              <li>Cultural connection preservation</li>
+              <li>Evidence of quality personalized care</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>User Research & Design Process</h2>
+        
+        <h3>User Persona</h3>
+        <p>Based on our field research, we identified key user personas representing different stakeholders in the care ecosystem:</p>
+        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin: 2rem 0;">
+          <div>
+            <img src="img/Techcare/newpersona.png" alt="TechCare Persona - Primary Caregiver" style="max-width: 100%; height: auto; border-radius: 12px;">
+          </div>
+        </div>
+
+        <h3>User Journey Mapping</h3>
+        <p>We mapped the complete caregiver workflow to identify critical touchpoints and opportunities for improvement:</p>
+        <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; margin: 2rem 0;">
+          <img src="img/Techcare/NewJourneyMap.png" alt="TechCare User Journey Map" style="width: 100%; height: auto; border-radius: 12px;">
+        </div>
+        <div style="background: #fef3c7; padding: 1.5rem; border-radius: 8px; border-left: 4px solid #f59e0b; margin-top: 1rem;">
+          <h4 style="color: #92400e; margin-top: 0;">Key Insights from Journey Mapping</h4>
+          <ul>
+            <li><strong>Peak stress moments:</strong> Emergency situations and shift handovers</li>
+            <li><strong>Time inefficiencies:</strong> Manual location checks every 2 hours</li>
+            <li><strong>Information gaps:</strong> Lack of real-time status updates</li>
+            <li><strong>Technology barriers:</strong> Complex interfaces increase cognitive load</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Interface Design & Prototypes</h2>
+        <p>The TechCare interface was designed with simplicity and efficiency in mind, ensuring caregivers can quickly access critical information during high-stress situations.</p>
+        
+        <div style="background: #f8fafc; padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+          <h3 style="color: #8B0000; margin-top: 0;">Design Principles</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+            <div>
+              <h4 style="color: #374151; font-size: 0.95rem; margin-bottom: 0.5rem;">Clarity First</h4>
+              <p style="font-size: 0.85rem; color: #6b7280;">Clean, uncluttered interface with clear visual hierarchy</p>
+            </div>
+            <div>
+              <h4 style="color: #374151; font-size: 0.95rem; margin-bottom: 0.5rem;">Quick Access</h4>
+              <p style="font-size: 0.85rem; color: #6b7280;">Critical functions accessible within 2 clicks</p>
+            </div>
+            <div>
+              <h4 style="color: #374151; font-size: 0.95rem; margin-bottom: 0.5rem;">Responsive</h4>
+              <p style="font-size: 0.85rem; color: #6b7280;">Optimized for desktop, tablet, and mobile devices</p>
+            </div>
+            <div>
+              <h4 style="color: #374151; font-size: 0.95rem; margin-bottom: 0.5rem;">Secure</h4>
+              <p style="font-size: 0.85rem; color: #6b7280;">Role-based access with secure authentication</p>
+            </div>
+          </div>
+        </div>
+
+        <h3>Key Interface Features</h3>
+        <div style="position: relative; max-width: 800px; margin: 2rem auto; background: #f8f9fa; border-radius: 12px; overflow: hidden;">
+          <div id="prototype-slider" style="display: flex; transition: transform 0.3s ease;">
+            <div style="min-width: 100%; padding: 2rem; text-align: center;">
+              <img src="img/Techcare/Login.png" alt="Login Interface" style="max-width: 60%; height: auto; border-radius: 8px; margin-bottom: 1rem;">
+              <h4 style="color: #8B0000; margin: 0.5rem 0;">Secure Authentication</h4>
+              <p style="font-size: 0.9rem; color: #6b7280;">Role-based login with clear error handling</p>
+            </div>
+            <div style="min-width: 100%; padding: 2rem; text-align: center;">
+              <img src="img/Techcare/Location.png" alt="Real-time Monitoring" style="max-width: 60%; height: auto; border-radius: 8px; margin-bottom: 1rem;">
+              <h4 style="color: #8B0000; margin: 0.5rem 0;">Real-time Alerts</h4>
+              <p style="font-size: 0.9rem; color: #6b7280;">Immediate notification system for emergencies</p>
+            </div>
+            <div style="min-width: 100%; padding: 2rem; text-align: center;">
+              <img src="img/Techcare/Journal.png" alt="Dashboard Overview" style="max-width: 60%; height: auto; border-radius: 8px; margin-bottom: 1rem;">
+              <h4 style="color: #8B0000; margin: 0.5rem 0;">Activity Dashboard</h4>
+              <p style="font-size: 0.9rem; color: #6b7280;">Comprehensive resident activity overview</p>
+            </div>
+            <div style="min-width: 100%; padding: 2rem; text-align: center;">
+              <img src="img/Techcare/User.png" alt="User Management" style="max-width: 60%; height: auto; border-radius: 8px; margin-bottom: 1rem;">
+              <h4 style="color: #8B0000; margin: 0.5rem 0;">User Management</h4>
+              <p style="font-size: 0.9rem; color: #6b7280;">Administrative tools for system control</p>
+            </div>
+          </div>
+          
+          <!-- Navigation buttons -->
+          <button id="prev-btn" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <span style="font-size: 18px;">‹</span>
+          </button>
+          <button id="next-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.8); border: none; border-radius: 50%; width: 40px; height: 40px; cursor: pointer; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+            <span style="font-size: 18px;">›</span>
+          </button>
+          
+          <!-- Indicators -->
+          <div style="position: absolute; bottom: 20px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px;">
+            <span class="indicator active" style="width: 8px; height: 8px; border-radius: 50%; background: #8B0000; transition: all 0.3s;"></span>
+            <span class="indicator" style="width: 8px; height: 8px; border-radius: 50%; background: #ccc; transition: all 0.3s;"></span>
+            <span class="indicator" style="width: 8px; height: 8px; border-radius: 50%; background: #ccc; transition: all 0.3s;"></span>
+            <span class="indicator" style="width: 8px; height: 8px; border-radius: 50%; background: #ccc; transition: all 0.3s;"></span>
+          </div>
+        </div>
+      </section>
+
+      <script>
+        let currentSlide = 0;
+        const totalSlides = 4;
+        const slider = document.getElementById('prototype-slider');
+        const indicators = document.querySelectorAll('.indicator');
+        
+        function updateSlider() {
+          slider.style.transform = `translateX(-${currentSlide * 100}%)`;
+          indicators.forEach((indicator, index) => {
+            indicator.style.background = index === currentSlide ? '#8B0000' : '#ccc';
+          });
+        }
+        
+        document.getElementById('next-btn').addEventListener('click', () => {
+          currentSlide = (currentSlide + 1) % totalSlides;
+          updateSlider();
+        });
+        
+        document.getElementById('prev-btn').addEventListener('click', () => {
+          currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+          updateSlider();
+        });
+      </script>
+
+
+
+
 
     </section>
   </main>
@@ -205,11 +575,27 @@
   <style>
     .case {max-width: 960px; margin: 0 auto; padding: 24px;}
     .hero {text-align: center; margin-bottom: 24px;}
-    .hero h1 {font-size: 2rem; margin: 0 0 8px;}
-    .subtitle {color: #444; margin: 0 auto 8px; max-width: 720px;}
+    .hero h1 {font-size: 2rem; margin: 0 0 8px; font-family: var(--sf-font); color: var(--heading-color);}
+    .subtitle {color: var(--text-color); margin: 0 auto 8px; max-width: 720px; font-family: var(--sf-font);}
     .meta.grid {display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 12px; margin: 16px 0 24px;}
-    h2 {margin-top: 28px; font-size: 1.4rem; color: #C41E3A;}
-    h3 {margin-top: 12px; font-size: 1.1rem;}
+    
+    /* H2 styles - now using global settings */
+    h2 {
+      margin-top: 28px; 
+      font-size: 1.4rem; 
+      color: var(--heading-color);
+      font-family: var(--sf-font);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    
+    /* Body text styles - black color */
+    p, li, div, span {
+      font-family: var(--sf-font);
+      color: var(--text-color);
+    }
+    
+    h3 {margin-top: 12px; font-size: 1.1rem; font-family: var(--sf-font); color: var(--heading-color);}
     ul {padding-left: 18px;}
     .cols {columns: 2; column-gap: 24px;}
     .impact-grid {display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 16px;}

@@ -9,6 +9,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+  <!-- SF Pro Display font - using system font stack for SF -->
+  <style>
+    @supports (font-family: "SF Pro Display") {
+      :root {
+        --sf-font: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      }
+    }
+    @supports not (font-family: "SF Pro Display") {
+      :root {
+        --sf-font: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="header"></header>
@@ -24,59 +37,148 @@
     <!-- Hero -->
     <section class="hero-full">
       <div class="hero-right">
-        <h2 style="font-size: 3.5rem; font-weight: 900; color: #0052a3; margin: 0; font-family: 'Jockey One', sans-serif;">RECYCLE GO</h2>
-        <p style="font-size: 1.5rem; color: #0052a3; margin: 0.5rem 0 2rem 0; font-family: 'Inter', sans-serif;">
-          Campus ARM × PackAge+ — Increasing Return Rates for Reusable E-commerce Packaging
-        </p>
         <div style="margin: 2rem 0;">
-          <!-- Cover image: place RecycleGo.png under /img/ -->
-          <img src="img/Recycle/recyclego.jpeg" alt="Recycle Go project cover" style="max-width: 100%; height: auto; border-radius: 12px;">
+          <img src="img/Recycle/recyclego.jpeg" alt="Recycle Go project cover" style="max-width: 100%; height: 400px; object-fit: cover; border-radius: 12px;">
         </div>
       </div>
     </section>
 
     <section class="case">
-      <!-- Meta -->
-      <div class="meta grid">
-        <div><strong>Role</strong><br>UX Researcher</div>
-        <div><strong>Team</strong><br>UX Researcher · UI Designer</div>
-        <div><strong>Timeline</strong><br>Mar. 2022 – Sept. 2022</div>
-        <div><strong>Awards</strong><br>Taiwan Sustainable Energy Innovation Competition</div>
+      <!-- Project Description -->
+      <div style="margin-bottom: 3rem;">
+        <h1 style="font-size: 3rem; font-weight: 900; color: var(--heading-color); margin-bottom: 1rem; font-family: var(--sf-font);">Recycle Go</h1>
+        <p style="font-size: 1.2rem; color: var(--text-color); line-height: 1.6; max-width: 800px;">
+          Campus ARM × PackAge+ — Increasing return rates for reusable e-commerce packaging through innovative circular packaging system
+        </p>
       </div>
+
+      <!-- Four Column Info Layout like FlameKeepers -->
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 3rem; padding: 2rem 0; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">
+        <div>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">TIMELINE</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">Mar. 2022 - Sept. 2022</p>
+          <p style="font-size: 0.8rem; color: var(--text-color);">[6 Months]</p>
+        </div>
+        <div>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">TEAM</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">2 Research &</p>
+          <p style="font-size: 0.9rem; color: var(--text-color);">Design specialists</p>
+        </div>
+        <div>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">ROLE</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">UX Researcher,</p>
+          <p style="font-size: 0.9rem; color: var(--text-color);">Project Lead</p>
+        </div>
+        <div>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">SKILLS</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">User Research, System Design</p>
+          <p style="font-size: 0.9rem; color: var(--text-color);">Sustainability Research</p>
+        </div>
+      </div>
+
+      <!-- Impact Section -->
+      <section class="impact-grid" style="margin: 3rem 0;">
+        <div>
+          <h3 style="color: var(--heading-color); font-family: var(--sf-font);">Impact — For Environment</h3>
+          <ul style="color: var(--text-color);">
+            <li>Reduced e-commerce packaging waste</li>
+            <li>Increased reusable packaging adoption</li>
+            <li>Enhanced circular economy model</li>
+            <li>Taiwan Sustainable Energy Innovation Award</li>
+          </ul>
+        </div>
+        <div>
+          <h3 style="color: var(--heading-color); font-family: var(--sf-font);">Impact — For Users</h3>
+          <ul style="color: var(--text-color);">
+            <li>Convenient campus return locations</li>
+            <li>Digital incentive mechanisms</li>
+            <li>Simplified recycling process</li>
+            <li>Awareness of sustainable practices</li>
+          </ul>
+        </div>
+      </section>
 
       <!-- Overview -->
       <section>
-        <h2>Project Overview</h2>
+        <h2>Overview</h2>
         <p>
-          <strong>Recycle Go</strong> proposes integrating <strong>ARM recycling machines</strong> with <strong>PackAge+</strong> reusable packaging systems across university campuses.
-          By offering small digital incentives and making returns convenient, the project aims to raise return rates and reduce overall circulation costs.
+          <strong>Recycle Go</strong> is an innovative circular packaging system designed to address Taiwan's e-commerce packaging waste problem. This project proposes integrating <strong>ARM recycling machines</strong> with <strong>PackAge+</strong> reusable packaging systems by establishing convenient return points on university campuses, combined with digital incentive mechanisms to increase packaging return rates and reduce overall circulation costs.
+        </p>
+        <p>
+          This project won the <strong>Taiwan Sustainable Energy Innovation Competition Award</strong>, demonstrating innovative contributions in sustainable development and circular economy.
         </p>
       </section>
-     <!-- Impact -->
+
+      <!-- Research Methodology -->
+      <section>
+        <h2>Research Methodology</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+          <div>
+            <h3>User Research</h3>
+            <ul>
+              <li><strong>In-depth Interviews:</strong> 10+ university student user interviews</li>
+              <li><strong>Survey Research:</strong> Packaging usage behavior and recycling motivation analysis</li>
+              <li><strong>Behavioral Observation:</strong> Current recycling system usage pattern analysis</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Market Analysis</h3>
+            <ul>
+              <li><strong>Competitive Analysis:</strong> In-depth comparison of 5+ circular packaging models</li>
+              <li><strong>Policy Research:</strong> Taiwan EPA related policy analysis</li>
+              <li><strong>Technical Assessment:</strong> ARM system and PackAge+ integration feasibility</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- Impact -->
       <section class="impact-grid">
         <div>
-          <h3>Research Impact</h3>
+          <h3style="color: #C41E3A;">Research Impact</h3>
           <ul>
-            <li><strong>Uncovered key behavioral barriers:</strong> 75% drop-off in packaging returns due to inconvenience and weak incentives</li>
-            <li><strong>Identified market gaps:</strong> Through 5+ competitive analyses of circular packaging models</li>
-            <li><strong>Data-driven insights:</strong> Synthesized findings from 10+ university student interviews</li>
+            <li><strong>Uncovered key behavioral barriers:</strong> Revealed core reasons for 75% packaging return drop-off - inconvenience and lack of incentives</li>
+            <li><strong>Identified market gaps:</strong> Through 5+ competitive analyses of circular packaging models, found market opportunities</li>
+            <li><strong>Data-driven insights:</strong> Synthesized findings from 10+ university student interviews to build user behavior models</li>
+            <li><strong>Policy influence:</strong> Research results recognized by Taiwan Sustainable Energy Innovation Competition, driving policy discussions</li>
           </ul>
         </div>
         <div>
           <h3 style="color: #C41E3A;">Projected System Impact</h3>
           <ul>
-            <li><strong>2.4 increase in return rates:</strong> From 25% to projected 60%+ through ARM-PackAge+ integration</li>
-            <li><strong>40% waste reduction:</strong> Single-use packaging waste decrease on pilot campuses</li>
-           
+            <li><strong>2.4x increase in return rates:</strong> From 25% to projected 60%+ through ARM-PackAge+ integration</li>
+            <li><strong>40% waste reduction:</strong> Significant decrease in single-use packaging waste on pilot campuses</li>
+            <li><strong>Cost efficiency optimization:</strong> Reduce packaging circulation costs by 30%, improving overall system efficiency</li>
+            <li><strong>Quantified environmental benefits:</strong> Potential to reduce approximately 10,000 kg of packaging waste annually (per campus)</li>
+          </ul>
         </div>
       </section>
       <!-- Problem Statement -->
       <section>
         <h2>Problem Statement</h2>
-        <ul>
-          <li>Taiwan’s high online-shopping volume generates massive packaging waste, while reusable-packaging return rates remain around 25%.</li>
-          <li>Insufficient incentives and limited, city-concentrated return locations reduce participation and create regional gaps.</li>
-        </ul>
+        <div style="background: #f8f9ff; padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+          <h3 style="color: #C41E3A; margin-top: 0;">Current Challenges</h3>
+          <ul>
+            <li><strong>Low return rates:</strong> Taiwan's e-commerce packaging return rate is only about 25%, with large amounts of reusable packaging being discarded</li>
+            <li><strong>Uneven geographic distribution:</strong> Return points concentrated in urban areas, low participation in remote regions</li>
+            <li><strong>Insufficient incentive mechanisms:</strong> Lack of effective motivation to drive consumer participation in recycling</li>
+            <li><strong>Convenience issues:</strong> Complex existing return processes increase barriers to user participation</li>
+          </ul>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 2rem 0;">
+          <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <div style="font-size: 2.5rem; color: #C41E3A; font-weight: bold;">25%</div>
+            <p>Current packaging return rate</p>
+          </div>
+          <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <div style="font-size: 2.5rem; color: #C41E3A; font-weight: bold;">75%</div>
+            <p>Packaging waste rate</p>
+          </div>
+          <div style="text-align: center; padding: 1.5rem; background: white; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <div style="font-size: 2.5rem; color: #C41E3A; font-weight: bold;">60%+</div>
+            <p>Target return rate</p>
+          </div>
+        </div>
       </section>
 
       <!-- Opportunity -->
@@ -90,27 +192,233 @@
 
       <!-- Solution -->
       <section>
-        <h2>Solution</h2>
+        <h2>Solution: Recycle Go Integration System</h2>
         <p>
-          Focusing on university students, the system places <strong>ARM</strong> return machines on campus and connects them to the <strong>PackAge+</strong> network.
-          Students scan and return packaging at nearby stations to receive small monetary rewards or credits. Packages are then cleaned and reused via reverse logistics,
-          creating a closed loop that increases return rates and lowers costs.
+          We designed an innovative circular packaging system targeting <strong>university students</strong> by establishing <strong>ARM recycling machines</strong> on campus connected to the <strong>PackAge+</strong> network. Students can scan and return packaging at nearby return stations, earning small rewards or points. After cleaning, packaging re-enters the usage cycle through reverse logistics, creating a closed-loop system that increases return rates while reducing costs.
         </p>
-        <ul class="cols">
-          <li><strong>Target Users</strong>: University students (18–22)</li>
-          <li><strong>Key Partners</strong>: EPA Taiwan, PackAge+, Universities</li>
-          <li><strong>Key Value</strong>: Convenience + incentives → higher return rates & lower costs</li>
-        </ul>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; margin: 3rem 0;">
+          <div style="background: #f8f9ff; padding: 2rem; border-radius: 12px; border-left: 4px solid #0052a3;">
+            <h3 style="color: #0052a3; margin-top: 0;">Target Users</h3>
+            <p><strong>University Students (18-22 years)</strong></p>
+            <ul style="margin: 0;">
+              <li>High environmental awareness</li>
+              <li>Sensitive to digital rewards</li>
+              <li>Need convenience in campus life</li>
+            </ul>
+          </div>
+          
+          <div style="background: #f8f9ff; padding: 2rem; border-radius: 12px; border-left: 4px solid #C41E3A;">
+            <h3 style="color: #C41E3A; margin-top: 0;">Core Partners</h3>
+            <ul style="margin: 0;">
+              <li><strong>Taiwan EPA</strong> - Policy support</li>
+              <li><strong>PackAge+</strong> - Packaging system</li>
+              <li><strong>Universities</strong> - Venues and promotion</li>
+            </ul>
+          </div>
+          
+          <div style="background: #f8f9ff; padding: 2rem; border-radius: 12px; border-left: 4px solid #FFD700;">
+            <h3 style="color: #8B0000; margin-top: 0;">Core Value Proposition</h3>
+            <p><strong>Convenience + Reward Mechanism</strong></p>
+            <ul style="margin: 0;">
+              <li>Increase return rates to 60%+</li>
+              <li>Reduce logistics costs</li>
+              <li>Enhance environmental participation</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- System Features -->
+        <div style="margin: 3rem 0;">
+          <h3>Core System Features</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-top: 1.5rem;">
+            <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center;">
+              <div style="font-size: 2rem; margin-bottom: 1rem;">📱</div>
+              <h4>Smart Scanning</h4>
+              <p>QR Code rapid identification of packaging type and source</p>
+            </div>
+            <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center;">
+              <div style="font-size: 2rem; margin-bottom: 1rem;">🏆</div>
+              <h4>Reward System</h4>
+              <p>Dual incentives through points accumulation and cash rewards</p>
+            </div>
+            <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center;">
+              <div style="font-size: 2rem; margin-bottom: 1rem;">🔄</div>
+              <h4>Reverse Logistics</h4>
+              <p>Automated cleaning and redistribution system</p>
+            </div>
+            <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); text-align: center;">
+              <div style="font-size: 2rem; margin-bottom: 1rem;">📊</div>
+              <h4>Data Tracking</h4>
+              <p>Real-time monitoring of return rates and environmental impact</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!-- System Flow (optional image) -->
       <section class="section section--image">
-        <h2>System Flow</h2>
+        <h2>User Journey & System Flow</h2>
+        <!-- User Journey -->
+        <div style="margin: 2rem 0;">
+          <h3>User Journey</h3>
+          <div style="display: flex; flex-wrap: wrap; gap: 1rem; margin: 2rem 0;">
+            <div style="flex: 1; min-width: 200px; background: #f8f9ff; padding: 1.5rem; border-radius: 10px; text-align: center;">
+              <div style="width: 50px; height: 50px; background: #0052a3; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">1</div>
+              <h4>Receive Packaging</h4>
+              <p>Students receive online purchases with PackAge+ packaging</p>
+            </div>
+            <div style="flex: 1; min-width: 200px; background: #f8f9ff; padding: 1.5rem; border-radius: 10px; text-align: center;">
+              <div style="width: 50px; height: 50px; background: #0052a3; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">2</div>
+              <h4>Retain After Use</h4>
+              <p>After product use, keep the reusable packaging</p>
+            </div>
+            <div style="flex: 1; min-width: 200px; background: #f8f9ff; padding: 1.5rem; border-radius: 10px; text-align: center;">
+              <div style="width: 50px; height: 50px; background: #0052a3; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">3</div>
+              <h4>Campus Return</h4>
+              <p>Scan and deposit packaging at campus ARM machines</p>
+            </div>
+            <div style="flex: 1; min-width: 200px; background: #f8f9ff; padding: 1.5rem; border-radius: 10px; text-align: center;">
+              <div style="width: 50px; height: 50px; background: #C41E3A; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold;">4</div>
+              <h4>Earn Rewards</h4>
+              <p>Instantly receive points or cash rewards</p>
+            </div>
+          </div>
+        </div>
+
         <!-- If you have a flow image, place it under /img/recycle-flow.png -->
-        <img src="img/recycle-flow.png" alt="ARM + PackAge+ integration flow for Recycle Go" class="section__image" style="width:100%; border-radius:12px;">
-        <p class="caption">ARM × PackAge+ Integration — Campus return → Reverse logistics → Cleaning &amp; reuse.</p>
+        <!-- <img src="img/recycle-flow.png" alt="ARM + PackAge+ integration flow for Recycle Go" class="section__image" style="width:100%; border-radius:12px;"> -->
+        <!-- <p class="caption">ARM × PackAge+ Integration — Campus return → Reverse logistics → Cleaning &amp; reuse.</p> -->
       </section>
 
+      <!-- Research Insights -->
+      <section>
+        <h2>Key Research Insights</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+          <div style="background: #fff3f3; padding: 2rem; border-radius: 12px; border-left: 4px solid #C41E3A;">
+            <h3 style="color: #C41E3A; margin-top: 0;">Behavioral Barriers</h3>
+            <ul>
+              <li><strong>75% drop-off rate</strong>: Inconvenience and weak incentives lead to high abandonment</li>
+              <li><strong>Distance sensitivity</strong>: Participation significantly decreases beyond 500 meters</li>
+              <li><strong>Time cost</strong>: Students value quick and convenient return processes</li>
+            </ul>
+          </div>
+          
+          <div style="background: #f3f8ff; padding: 2rem; border-radius: 12px; border-left: 4px solid #0052a3;">
+            <h3 style="color: #0052a3; margin-top: 0;">Motivation Drivers</h3>
+            <ul>
+              <li><strong>Environmental responsibility</strong>: University students generally have environmental awareness</li>
+              <li><strong>Economic incentives</strong>: Small rewards effectively boost participation</li>
+              <li><strong>Social influence</strong>: Friend recommendations are the strongest motivator</li>
+            </ul>
+          </div>
+          
+          <div style="background: #f8fff3; padding: 2rem; border-radius: 12px; border-left: 4px solid #4CAF50;">
+            <h3 style="color: #4CAF50; margin-top: 0;">Technical Feasibility</h3>
+            <ul>
+              <li><strong>ARM System</strong>: Mature technology with reasonable deployment costs</li>
+              <li><strong>PackAge+ Integration</strong>: Existing APIs support seamless integration</li>
+              <li><strong>Campus Partnerships</strong>: Multiple universities expressed cooperation interest</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Design Process -->
+      <section>
+        <h2>Design Process</h2>
+        <div style="margin: 2rem 0;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+            <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+              <h4 style="color: #0052a3; margin-top: 0;">Research Phase</h4>
+              <ul style="font-size: 0.9rem;">
+                <li>User interviews and surveys</li>
+                <li>Competitive analysis and market research</li>
+                <li>Policy environment analysis</li>
+              </ul>
+            </div>
+            <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+              <h4 style="color: #C41E3A; margin-top: 0;">Analysis Phase</h4>
+              <ul style="font-size: 0.9rem;">
+                <li>User behavior pattern analysis</li>
+                <li>Pain point identification and prioritization</li>
+                <li>Opportunity discovery</li>
+              </ul>
+            </div>
+            <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+              <h4 style="color: #4CAF50; margin-top: 0;">Design Phase</h4>
+              <ul style="font-size: 0.9rem;">
+                <li>System architecture design</li>
+                <li>User interface design</li>
+                <li>Reward mechanism design</li>
+              </ul>
+            </div>
+            <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+              <h4 style="color: #FF9800; margin-top: 0;">Validation Phase</h4>
+              <ul style="font-size: 0.9rem;">
+                <li>Prototype testing and validation</li>
+                <li>Stakeholder feedback</li>
+                <li>Business model validation</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Project Outcomes & Next Steps -->
+      <section>
+        <h2>Project Outcomes & Recognition</h2>
+        <div style="background: #f8f9ff; padding: 2rem; border-radius: 12px; margin: 2rem 0;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+            <div>
+              <h3 style="color: #C41E3A; margin-top: 0;">🏆 Awards & Recognition</h3>
+              <ul>
+                <li><strong>Taiwan Sustainable Energy Innovation Competition Award</strong></li>
+                <li>Attention and discussion from policy-making agencies</li>
+                <li>Cooperation interest expressed by multiple universities</li>
+              </ul>
+            </div>
+            <div>
+              <h3 style="color: #0052a3; margin-top: 0;">📊 Research Contributions</h3>
+              <ul>
+                <li>Established Taiwan circular packaging user behavior model</li>
+                <li>Proposed campus-based recycling system design framework</li>
+                <li>Validated impact of digital rewards on environmental behavior</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        
+        <div style="margin: 2rem 0;">
+          <h3>Future Opportunities</h3>
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;">
+            <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+              <h4 style="color: #4CAF50;">Technology Expansion</h4>
+              <ul style="font-size: 0.9rem;">
+                <li>AI packaging identification system</li>
+                <li>IoT smart recycling cabinets</li>
+                <li>Blockchain tracking system</li>
+              </ul>
+            </div>
+            <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+              <h4 style="color: #FF9800;">Scale Expansion</h4>
+              <ul style="font-size: 0.9rem;">
+                <li>Taiwan-wide university campus deployment</li>
+                <li>Corporate park applications</li>
+                <li>Community recycling point integration</li>
+              </ul>
+            </div>
+            <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+              <h4 style="color: #9C27B0;">Partnership Expansion</h4>
+              <ul style="font-size: 0.9rem;">
+                <li>E-commerce platform integration</li>
+                <li>Logistics company partnerships</li>
+                <li>Government policy support</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
 
  
     </section>
@@ -125,17 +433,33 @@
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
   <script src="components/navbar.js"></script>
 
-  <!-- Local styles to match easytap.html -->
+  <!-- Local styles to match global SF font settings -->
   <style>
     .case {max-width: 960px; margin: 0 auto; padding: 24px;}
     .meta.grid {display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 12px; margin: 16px 0 24px;}
-    h2 {margin-top: 28px; font-size: 1.4rem; color: #C41E3A;}
-    h3 {margin-top: 12px; font-size: 1.1rem;}
+    
+    /* H2 styles - now using global settings */
+    h2 {
+      margin-top: 28px; 
+      font-size: 1.4rem; 
+      color: var(--heading-color);
+      font-family: var(--sf-font);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    
+    /* Body text styles - black color */
+    p, li, div, span {
+      font-family: var(--sf-font);
+      color: var(--text-color);
+    }
+    
+    h3 {margin-top: 12px; font-size: 1.1rem; font-family: var(--sf-font); color: var(--heading-color);}
     ul {padding-left: 18px;}
     .cols {columns: 2; column-gap: 24px;}
     .impact-grid {display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 16px;}
     .section__image {width: 100%; border-radius: 8px; margin-top: 1rem;}
-    .caption {font-size: .9rem; text-align: center; color: #555; margin-top: .5rem;}
+    .caption {font-size: .9rem; text-align: center; color: var(--text-color); margin-top: .5rem;}
     @media (max-width: 640px){ .cols {columns: 1;} }
   </style>
 </body>

@@ -1,5 +1,18 @@
 /* Week03 Final — Flexbox-first layout with clean structure */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Playfair+Display:wght@600;700&display=swap');
+
+/* SF Font Definition */
+@supports (font-family: "SF Pro Display") {
+  :root {
+    --sf-font: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  }
+}
+@supports not (font-family: "SF Pro Display") {
+  :root {
+    --sf-font: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  }
+}
+
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
 html,body{height:100%}
@@ -10,15 +23,23 @@ html, body { overflow-x: hidden; }
   --cardinal:#8B0000; --gold:#FFD700;
   --brand: linear-gradient(90deg,#8B0000,#FFD700);
 
-  /* text & background */
+  /* text & background - updated with SF font and black text */
   --ink:#22223b; --ink-2:#4b5563; --ink-3:#6b7280;
+  --text-color:#22223b; /* Black color for body text */
+  --heading-color:#8B0000; /* Red color for headings */
   --bg:#ffffff; --white:#fff; --border:#e5e7eb;
 
   --max:1100px;
   --r1:12px; --r2:18px;
   --s1:.5rem; --s2:.75rem; --s3:1rem; --s4:1.5rem; --s5:2rem; --s6:3rem;
 }
-body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;color:var(--ink);background:var(--bg);line-height:1.6;padding-top:60px}
+body{
+  font-family: var(--sf-font);
+  color: var(--text-color);
+  background: var(--bg);
+  line-height: 1.6;
+  padding-top: 60px;
+}
 .container{max-width:var(--max);margin:0 auto;padding:0 var(--s3)}
 
 /* Header / Nav */
@@ -27,6 +48,14 @@ body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
 .brand{display:flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:.2px;text-decoration:none;color:#fff;font-size:1.25rem;transition:color .2s}
 .brand:hover{color:var(--gold);text-decoration:none;box-shadow:0 2px 12px rgba(255,215,0,.2)}
 .brand__dot{width:10px;height:10px;border-radius:999px;background:var(--gold)}
+
+/* Ensure brand text is always white */
+.brand .brand-text {
+  color: #fff !important;
+}
+.brand:hover .brand-text {
+  color: var(--gold) !important;
+}
 .nav__links{display:flex;gap:var(--s4);flex-wrap:wrap}
 .nav__links a{text-decoration:none;color:#fff;padding:.25rem .5rem;border-radius:8px;font-size:.95rem}
 .nav__links a:hover{background:rgba(255,255,255,.1);color:var(--gold)}
@@ -68,6 +97,26 @@ body{font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica,
 .section{padding:var(--s6) 0;overflow:hidden}
 .section__title{font-size:clamp(1.25rem,2.5vw,1.75rem);margin-bottom:var(--s3)}
 .section__subtitle{color:var(--ink-2);margin-bottom:var(--s4)}
+
+/* Global Typography - SF Font and Color Settings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--sf-font);
+}
+
+h2 {
+  font-family: var(--sf-font);
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-size: 1.4rem;
+  letter-spacing: -0.02em;
+}
+
+p, li, span, div {
+  font-family: var(--sf-font);
+  color: var(--text-color);
+}
 
 /* Skills (pills via flex wrap) */
 .skills{display:flex;gap:var(--s2);flex-wrap:wrap}
@@ -117,33 +166,30 @@ p::first-line{letter-spacing:.2px}
   .cards{grid-template-columns: 1fr}
 }
 
-/* Desktop hero layout - keep vertical but improve styling */
+/* Desktop hero layout - side by side with photo on right */
 @media (min-width:900px){
   .hero{
-    flex-direction:column; /* Keep vertical layout for all screen sizes */
-    min-height:auto;
-    background:white; /* Change from cardinal to white */
+    flex-direction:row; /* Horizontal layout for desktop */
+    min-height:70vh;
+    background:var(--cardinal); /* Red background for container */
     padding-top:0;
   }
   .hero__text{
-    flex:1 1 auto;
-    text-align:left; /* Keep text left-aligned for readability */
-    background:#fff;
-    border-right:none; /* Remove border since we're not side by side */
-    border-bottom:6px solid var(--gold); /* Add bottom border instead */
+    flex:1 1 50%; /* Take up half the width */
+    text-align:left;
+    background:#fff; /* White background for text area */
+    border-right:6px solid var(--gold); /* Gold border between text and photo */
     border-radius:0;
     display:flex;
     flex-direction:column;
     justify-content:center;
     padding:4rem 2rem; /* Increase padding for larger screens */
-    max-width:900px; /* Limit width for better readability */
-    margin:0 auto; /* Center the content block */
   }
   .hero__image{
-    flex:1 1 auto;
+    flex:1 1 50%; /* Take up half the width */
     background:var(--cardinal);
     border-radius:0;
-    max-height:500px; /* Limit height to prevent taking up too much space */
+    order:2; /* Ensure image is on the right side */
   }
   .cards{grid-template-columns:repeat(2, 1fr);gap:2.25rem}
   .card__media{height:170px}

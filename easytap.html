@@ -9,6 +9,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+  <!-- SF Pro Display font - using system font stack for SF -->
+  <style>
+    @supports (font-family: "SF Pro Display") {
+      :root {
+        --sf-font: "SF Pro Display", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      }
+    }
+    @supports not (font-family: "SF Pro Display") {
+      :root {
+        --sf-font: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+      }
+    }
+  </style>
 </head>
 <body>
   <header class="header"></header>
@@ -23,28 +36,49 @@
 
     <section class="hero-full">
       <div class="hero-right">
-        <h2 style="font-size: 3.5rem; font-weight: 900; color: #0052a3; margin: 0; font-family: 'Jockey One', sans-serif;">EASYTAP</h2>
-        <p style="font-size: 1.5rem; color: #0052a3; margin: 0.5rem 0 2rem 0; font-family: 'Inter', sans-serif;">Detachable Tap Shoes Innovation</p>
         <div style="margin: 2rem 0;">
-          <img src="img/EasyTap/EasyTap.png" alt="EasyTap Product Mockup" style="max-width: 100%; height: auto; border-radius: 12px;">
+          <img src="./img/EasyTap/EasyTap.png" alt="EasyTap Hero" style="max-width: 100%; height: 400px; object-fit: cover; border-radius: 12px;">
         </div>
       </div>
     </section>
 
     <section class="case">
-
-      <div class="meta grid">
-        <div><strong>Role</strong><br>UIUX Designer · Product Designer</div>
-        <div><strong>Team</strong><br>Product Designer · Engineer</div>
-        <div><strong>Timeline</strong><br>Aug. 2025 - Present</div>
-        <div><strong>Tools</strong><br>Miro, Adobe Illustrator</div>
+      <!-- Project Description -->
+      <div style="margin-bottom: 3rem;">
+        <h1 style="font-size: 3rem; font-weight: 900; color: var(--heading-color); margin-bottom: 1rem; font-family: var(--sf-font);">EasyTap</h1>
+        <p style="font-size: 1.2rem; color: var(--text-color); line-height: 1.6; max-width: 800px;">
+          Detachable tap dance shoes for dancers - a cost-effective solution that enables flexibility without compromising performance
+        </p>
       </div>
 
-      <!-- Impact Section moved to top -->
+      <!-- Four Column Info Layout like FlameKeepers -->
+      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-bottom: 3rem; padding: 2rem 0; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb;">
+        <div>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">TIMELINE</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">Aug. 2025 - Present</p>
+          <p style="font-size: 0.8rem; color: var(--text-color);">[4+ Months]</p>
+        </div>
+        <div>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">TEAM</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">Solo Project</p>
+        </div>
+        <div>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">ROLE</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">Product Designer,</p>
+          <p style="font-size: 0.9rem; color: var(--text-color);">UX Researcher</p>
+        </div>
+        <div>
+          <h4 style="color: #FF9800; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; font-family: var(--sf-font);">SKILLS</h4>
+          <p style="font-size: 0.9rem; color: var(--text-color);">Product Design, User Research</p>
+          <p style="font-size: 0.9rem; color: var(--text-color);">Prototyping, Market Analysis</p>
+        </div>
+      </div>
+
+      <!-- Impact Section -->
       <section class="impact-grid" style="margin: 3rem 0;">
         <div>
-          <h3>Impact — For Dancers</h3>
-          <ul>
+          <h3 style="color: var(--heading-color); font-family: var(--sf-font);">Impact — For Dancers</h3>
+          <ul style="color: var(--text-color);">
             <li>Reduced financial burden on tap dancing</li>
             <li>Increased flexibility in shoe choices</li>
             <li>Better portability for travel and training</li>
@@ -52,8 +86,8 @@
           </ul>
         </div>
         <div>
-          <h3>Impact — For the Industry</h3>
-          <ul>
+          <h3 style="color: var(--heading-color); font-family: var(--sf-font);">Impact — For the Industry</h3>
+          <ul style="color: var(--text-color);">
             <li>More accessible tap dancing to wider audience</li>
             <li>Innovative approach to traditional product</li>
             <li>Growing market for affordable solutions</li>
@@ -182,11 +216,27 @@
   <style>
     .case {max-width: 960px; margin: 0 auto; padding: 24px;}
     .hero {text-align: center; margin-bottom: 24px;}
-    .hero h1 {font-size: 2rem; margin: 0 0 8px;}
-    .subtitle {color: #444; margin: 0 auto 8px; max-width: 720px;}
+    .hero h1 {font-size: 2rem; margin: 0 0 8px; font-family: var(--sf-font); color: var(--heading-color);}
+    .subtitle {color: var(--text-color); margin: 0 auto 8px; max-width: 720px; font-family: var(--sf-font);}
     .meta.grid {display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 12px; margin: 16px 0 24px;}
-    h2 {margin-top: 28px; font-size: 1.4rem; color: #C41E3A;}
-    h3 {margin-top: 12px; font-size: 1.1rem;}
+    
+    /* H2 styles - now using global settings */
+    h2 {
+      margin-top: 28px; 
+      font-size: 1.4rem; 
+      color: var(--heading-color);
+      font-family: var(--sf-font);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+    
+    /* Body text styles - black color */
+    p, li, div, span {
+      font-family: var(--sf-font);
+      color: var(--text-color);
+    }
+    
+    h3 {margin-top: 12px; font-size: 1.1rem; font-family: var(--sf-font); color: var(--heading-color);}
     ul {padding-left: 18px;}
     .cols {columns: 2; column-gap: 24px;}
     .impact-grid {display: grid; grid-template-columns: repeat(auto-fit,minmax(280px,1fr)); gap: 16px;}
